@@ -150,8 +150,8 @@ Edita las variables CSS en `styles.css`:
 
 ```css
 :root {
-    --primary-color: #6366f1;  /* Cambia el color principal */
-    --secondary-color: #ec4899; /* Cambia el color secundario */
+    --primary-color: #14b8a6;  /* Verde Agua - Branding AIBA */
+    --secondary-color: #06b6d4; /* Cyan - Complementario */
     /* ... más variables */
 }
 ```

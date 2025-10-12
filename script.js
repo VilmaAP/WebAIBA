@@ -360,23 +360,30 @@ function checkCounters() {
     statNumbers.forEach(stat => {
         const rect = stat.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-            const text = stat.textContent;
-            const hasPlus = text.includes('+');
-            const hasMinus = text.includes('-');
-            const hasPercent = text.includes('%');
-            const number = parseInt(text.replace(/\D/g, ''));
-            
-            if (!isNaN(number)) {
-                stat.textContent = '0';
-                animateCounter(stat, number);
-                setTimeout(() => {
-                    let finalText = number.toString();
-                    if (hasPlus) finalText = '+' + finalText;
-                    if (hasMinus) finalText = '-' + finalText;
-                    if (hasPercent) finalText += '%';
-                    stat.textContent = finalText;
-                }, 2000);
-            }
+        const text = stat.textContent;
+        
+        // Caso especial para "24/7"
+        if (text === '24/7') {
+            stat.textContent = '24/7';
+            return;
+        }
+        
+        const hasPlus = text.includes('+');
+        const hasMinus = text.includes('-');
+        const hasPercent = text.includes('%');
+        const number = parseInt(text.replace(/\D/g, ''));
+        
+        if (!isNaN(number)) {
+            stat.textContent = '0';
+            animateCounter(stat, number);
+            setTimeout(() => {
+                let finalText = number.toString();
+                if (hasPlus) finalText = '+' + finalText;
+                if (hasMinus) finalText = '-' + finalText;
+                if (hasPercent) finalText += '%';
+                stat.textContent = finalText;
+            }, 2000);
+        }
             
             countersAnimated = true;
         }
