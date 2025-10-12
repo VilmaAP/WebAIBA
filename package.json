@@ -1,0 +1,40 @@
+{
+  "name": "aiba-website",
+  "version": "1.0.0",
+  "description": "AIBA - Automatización Inteligente para Empresas. Website landing page.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "build": "npm run minify",
+    "minify:css": "cleancss -o styles.min.css styles.css",
+    "minify:js": "uglifyjs script.js -c -m -o script.min.js",
+    "minify": "npm run minify:css && npm run minify:js",
+    "optimize": "npm run minify",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:vercel": "vercel --prod"
+  },
+  "keywords": [
+    "aiba",
+    "automation",
+    "ai",
+    "business",
+    "landing-page",
+    "website"
+  ],
+  "author": "AIBA Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "netlify-cli": "^17.0.0",
+    "serve": "^14.2.1",
+    "uglify-js": "^3.17.4",
+    "vercel": "^32.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

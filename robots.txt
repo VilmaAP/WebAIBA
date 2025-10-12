@@ -1,0 +1,12 @@
+# robots.txt for AIBA
+# https://aibalabs.ai/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aibalabs.ai/sitemap.xml
+
+# Block specific bots if needed
+# User-agent: BadBot
+# Disallow: /

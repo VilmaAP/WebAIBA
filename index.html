@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIBA - Automatización Inteligente para Empresas. Atiende clientes 24/7 con IA. Aumenta reservas en hoteles, restaurantes y clínicas.">
+    <meta name="keywords" content="automatización, IA, inteligencia artificial, reservas, hoteles, restaurantes, clínicas, whatsapp automation">
+    <meta name="author" content="AIBA Labs">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aibalabs.ai/">
+    <meta property="og:title" content="AIBA - Automatización Inteligente para Empresas">
+    <meta property="og:description" content="Nunca más pierdas clientes. Tu negocio atendiendo 24/7 con IA.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aibalabs.ai/">
+    <meta property="twitter:title" content="AIBA - Automatización Inteligente para Empresas">
+    
+    <title>AIBA - Automatización Inteligente 24/7 para tu Negocio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>AIBA</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#problemas" class="nav-link">Problemas</a></li>
+                    <li><a href="#como-funciona" class="nav-link">Cómo Funciona</a></li>
+                    <li><a href="#industrias" class="nav-link">Industrias</a></li>
+                    <li><a href="#precios" class="nav-link">Precios</a></li>
+                    <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary btn-nav">Agendar Diagnóstico</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="gradient-bg"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Automatización Inteligente con IA</span>
+                </div>
+                <h1 class="hero-title">
+                    ¿Pierdes <span class="gradient-text">reservas y citas</span> por no responder al instante?
+                </h1>
+                <p class="hero-subtitle">
+                    Deja de perder clientes y dinero. Con AIBA, tu negocio atiende <strong>24/7</strong>, incluso mientras duermes.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Atención continua</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+300%</div>
+                        <div class="stat-label">Más conversiones</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Clientes perdidos</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Agendar Diagnóstico Gratuito
+                    </a>
+                    <a href="#como-funciona" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-play-circle"></i>
+                        Ver Cómo Funciona
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-badges">
+                        <span><i class="fas fa-check-circle"></i> Sin tarjeta de crédito</span>
+                        <span><i class="fas fa-check-circle"></i> Diagnóstico personalizado</span>
+                        <span><i class="fas fa-check-circle"></i> Resultados garantizados</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="hero-visual">
+                    <div class="chat-bubble chat-1">
+                        <div class="chat-avatar">👨</div>
+                        <div class="chat-content">
+                            <p>Hola, necesito reservar para 4 personas mañana a las 8pm</p>
+                            <span class="chat-time">23:45</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-2">
+                        <div class="chat-avatar bot">🤖</div>
+                        <div class="chat-content">
+                            <p>¡Perfecto! He encontrado disponibilidad para 4 personas mañana a las 20:00. ¿Confirmo tu reserva?</p>
+                            <span class="chat-time">23:45</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-3">
+                        <div class="chat-avatar">👨</div>
+                        <div class="chat-content">
+                            <p>Sí, por favor 👍</p>
+                            <span class="chat-time">23:46</span>
+                        </div>
+                    </div>
+                    <div class="notification-badge">
+                        <i class="fas fa-check-double"></i>
+                        <span>Reserva confirmada automáticamente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problems" id="problemas">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Los problemas que resolvemos</span>
+                <h2 class="section-title">¿Te suena familiar alguno de estos escenarios?</h2>
+                <p class="section-subtitle">Si respondiste sí a alguno, AIBA es tu solución</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atrapado en la Operación</h3>
+                    <p>Tu negocio no crece porque estás atrapado en la operación diaria en lugar de enfocarte en la estrategia.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-70% tiempo estratégico</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Mensajes Fuera de Horario</h3>
+                    <p>Un cliente te escribe fuera de horario y para cuando respondes, ya reservó en otro lugar.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-40% conversiones</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon">
+                        <i class="fas fa-repeat"></i>
+                    </div>
+                    <h3>Preguntas Repetitivas</h3>
+                    <p>Tu personal pasa más tiempo respondiendo preguntas repetitivas que atendiendo a los clientes presentes.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-5 horas/día perdidas</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Caos en la Agenda</h3>
+                    <p>La agenda es un caos de llamadas, WhatsApp y correos. Temes que haya un doble agendamiento.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">15% dobles reservas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">La solución inteligente</span>
+                <h2 class="section-title">Esto no es una automatización. <br>Es el <span class="gradient-text">cerebro operativo</span> de tu negocio.</h2>
+                <p class="section-subtitle">Olvídate de hacer malabares entre WhatsApp, tu CRM y planillas</p>
+            </div>
+            
+            <div class="workflow-demo" data-aos="fade-up">
+                <div class="workflow-visual">
+                    <div class="workflow-step step-1">
+                        <div class="step-icon"><i class="fas fa-message"></i></div>
+                        <h4>Mensaje entrante</h4>
+                        <p>Cliente escribe en WhatsApp</p>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step step-2">
+                        <div class="step-icon"><i class="fas fa-brain"></i></div>
+                        <h4>IA procesa</h4>
+                        <p>Entiende y responde</p>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step step-3">
+                        <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h4>Acción automática</h4>
+                        <p>Agenda y confirma</p>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step step-4">
+                        <div class="step-icon"><i class="fas fa-database"></i></div>
+                        <h4>CRM actualizado</h4>
+                        <p>Todo sincronizado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Respuesta Instantánea</h3>
+                    <p>La IA responde al instante, cualquier hora del día, en lenguaje natural y personalizado para tu negocio.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Respuestas en menos de 5 segundos</li>
+                        <li><i class="fas fa-check"></i> Tono personalizado a tu marca</li>
+                        <li><i class="fas fa-check"></i> Múltiples idiomas</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestión Completa</h3>
+                    <p>Desde la consulta hasta la confirmación, pasando por recordatorios y seguimiento post-servicio.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Agenda automática</li>
+                        <li><i class="fas fa-check"></i> Recordatorios inteligentes</li>
+                        <li><i class="fas fa-check"></i> Follow-up personalizado</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analítica Avanzada</h3>
+                    <p>Dashboard con métricas en tiempo real para que tomes decisiones basadas en datos.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Tasa de conversión</li>
+                        <li><i class="fas fa-check"></i> Horarios pico</li>
+                        <li><i class="fas fa-check"></i> Reportes automáticos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries" id="industrias">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Creado para negocios como el tuyo</span>
+                <h2 class="section-title">Si tu éxito depende de agendar clientes, <br>estás en el lugar correcto</h2>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="industry-image">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>Hoteles y Hostales</h3>
+                        <p>Nunca más pierdas una reserva. Atiende y confirma a tus futuros huéspedes 24/7, gestiona check-in/check-out y responde preguntas frecuentes automáticamente.</p>
+                        <div class="industry-benefits">
+                            <span class="benefit-tag"><i class="fas fa-arrow-up"></i> +45% reservas directas</span>
+                            <span class="benefit-tag"><i class="fas fa-arrow-down"></i> -60% tiempo gestión</span>
+                        </div>
+                        <ul class="industry-features">
+                            <li><i class="fas fa-check-circle"></i> Confirmación automática de reservas</li>
+                            <li><i class="fas fa-check-circle"></i> Gestión de disponibilidad en tiempo real</li>
+                            <li><i class="fas fa-check-circle"></i> Upselling de servicios adicionales</li>
+                            <li><i class="fas fa-check-circle"></i> Recordatorios de check-in</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="industry-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>Restaurantes</h3>
+                        <p>Llena tus mesas automáticamente. Gestiona reservas, pedidos para llevar y delivery sin esfuerzo y sin perder un solo cliente.</p>
+                        <div class="industry-benefits">
+                            <span class="benefit-tag"><i class="fas fa-arrow-up"></i> +35% ocupación mesas</span>
+                            <span class="benefit-tag"><i class="fas fa-arrow-down"></i> -80% no-shows</span>
+                        </div>
+                        <ul class="industry-features">
+                            <li><i class="fas fa-check-circle"></i> Reservas con gestión de turnos</li>
+                            <li><i class="fas fa-check-circle"></i> Menú digital interactivo</li>
+                            <li><i class="fas fa-check-circle"></i> Pedidos online automatizados</li>
+                            <li><i class="fas fa-check-circle"></i> Programa de fidelización</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="industry-image">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h3>Clínicas y Consultorios</h3>
+                        <p>Optimiza tu agenda de pacientes, reduce ausencias con recordatorios inteligentes y libera a tu personal para tareas de mayor valor.</p>
+                        <div class="industry-benefits">
+                            <span class="benefit-tag"><i class="fas fa-arrow-up"></i> +50% eficiencia agenda</span>
+                            <span class="benefit-tag"><i class="fas fa-arrow-down"></i> -70% ausencias</span>
+                        </div>
+                        <ul class="industry-features">
+                            <li><i class="fas fa-check-circle"></i> Agendamiento por especialidad</li>
+                            <li><i class="fas fa-check-circle"></i> Recordatorios automáticos</li>
+                            <li><i class="fas fa-check-circle"></i> Recopilación de síntomas pre-consulta</li>
+                            <li><i class="fas fa-check-circle"></i> Gestión de historiales básicos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Planes transparentes</span>
+                <h2 class="section-title">Invierte en crecimiento, no en más personal</h2>
+                <p class="section-subtitle">Planes diseñados para negocios de todos los tamaños</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="pricing-description">Perfecto para comenzar a automatizar</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">297</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Hasta 500 conversaciones/mes</li>
+                        <li><i class="fas fa-check"></i> 1 canal de comunicación</li>
+                        <li><i class="fas fa-check"></i> Integración con calendario</li>
+                        <li><i class="fas fa-check"></i> Respuestas automáticas 24/7</li>
+                        <li><i class="fas fa-check"></i> Dashboard básico</li>
+                        <li><i class="fas fa-check"></i> Soporte por email</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline">Comenzar Ahora</a>
+                </div>
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="popular-badge">Más Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <p class="pricing-description">Para negocios en crecimiento</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">597</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Hasta 2,000 conversaciones/mes</li>
+                        <li><i class="fas fa-check"></i> 3 canales de comunicación</li>
+                        <li><i class="fas fa-check"></i> Integración CRM completa</li>
+                        <li><i class="fas fa-check"></i> IA personalizada a tu negocio</li>
+                        <li><i class="fas fa-check"></i> Dashboard avanzado + reportes</li>
+                        <li><i class="fas fa-check"></i> Automatizaciones personalizadas</li>
+                        <li><i class="fas fa-check"></i> Soporte prioritario 24/7</li>
+                        <li><i class="fas fa-check"></i> Onboarding dedicado</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary">Comenzar Ahora</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="pricing-description">Solución completa a medida</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="custom">Personalizado</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Conversaciones ilimitadas</li>
+                        <li><i class="fas fa-check"></i> Canales ilimitados</li>
+                        <li><i class="fas fa-check"></i> Integraciones custom</li>
+                        <li><i class="fas fa-check"></i> IA entrenada específicamente</li>
+                        <li><i class="fas fa-check"></i> Analytics enterprise</li>
+                        <li><i class="fas fa-check"></i> API access completo</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> SLA garantizado</li>
+                        <li><i class="fas fa-check"></i> Múltiples ubicaciones</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline">Contactar Ventas</a>
+                </div>
+            </div>
+            <div class="pricing-note" data-aos="fade-up">
+                <p><i class="fas fa-shield-alt"></i> Todos los planes incluyen 30 días de prueba con garantía de devolución</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Casos de éxito reales</span>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle">Empresas que ya transformaron su operación con AIBA</p>
+            </div>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Desde que instalamos la asistente IA de AIBA, dejamos de perder reservas por mensajes sin responder. Ahora todo fluye solo y tenemos más tiempo para enfocarnos en nuestros huéspedes. En menos de un mes, aumentaron nuestras reservas directas y bajó el estrés del equipo."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Felipe Acosta</h4>
+                                <p>CEO de Hotel de Cielo</p>
+                                <span class="author-location"><i class="fas fa-map-marker-alt"></i> Mendoza, Argentina</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">+65%</span>
+                                <span class="stat-label">Reservas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-50%</span>
+                                <span class="stat-label">Tiempo gestión</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Antes perdíamos el 40% de las llamadas porque estábamos ocupados atendiendo. Con AIBA, cada consulta se convierte en reserva. La IA incluso hace upselling de nuestros vinos y postres. Increíble ROI."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>María Rodríguez</h4>
+                                <p>Propietaria de La Trattoría</p>
+                                <span class="author-location"><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">+85%</span>
+                                <span class="stat-label">Conversión</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+32%</span>
+                                <span class="stat-label">Ticket promedio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Como clínica dental, los no-shows eran nuestro mayor problema. AIBA envía recordatorios inteligentes y confirma citas automáticamente. Nuestras ausencias bajaron del 25% al 5%. La inversión se pagó sola en 2 meses."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Dr. Carlos Méndez</h4>
+                                <p>Director Clínica DentPro</p>
+                                <span class="author-location"><i class="fas fa-map-marker-alt"></i> Córdoba, Argentina</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">-80%</span>
+                                <span class="stat-label">No-shows</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+40%</span>
+                                <span class="stat-label">Capacidad usada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Preguntas frecuentes</span>
+                <h2 class="section-title">Todo lo que necesitas saber</h2>
+                <p class="section-subtitle">¿Tienes más preguntas? <a href="#contacto">Contáctanos</a></p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>¿Cómo funciona AIBA exactamente?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA es un sistema de inteligencia artificial que se integra con tus canales de comunicación (WhatsApp, Facebook, web, etc.) y tu sistema de gestión. Cuando un cliente envía un mensaje, la IA lo procesa, entiende la intención, responde de forma natural, y ejecuta las acciones necesarias como agendar citas, confirmar reservas, enviar información, actualizar tu CRM, y más. Todo automáticamente, 24/7.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo toma implementar AIBA?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La implementación básica toma entre 48-72 horas. Esto incluye: configuración inicial, integración con tus sistemas, personalización de la IA con tu información y entrenamiento de tu equipo. Los planes Professional y Enterprise incluyen un proceso de onboarding dedicado para asegurar una transición suave.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>¿Se integra con mi sistema actual?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. AIBA se integra con los principales sistemas de gestión como Google Calendar, Calendly, HubSpot, Salesforce, y muchos más. También ofrecemos integraciones personalizadas a través de API para sistemas propietarios. Durante el diagnóstico gratuito, evaluamos tu stack tecnológico y diseñamos la mejor estrategia de integración.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question">
+                        <span>¿Qué tan "inteligente" es la IA? ¿Puede manejar conversaciones complejas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA utiliza modelos de lenguaje avanzados entrenados específicamente para tu industria y negocio. Puede manejar múltiples intenciones, entender contexto, hacer preguntas de seguimiento, y escalar a un humano cuando detecta una situación que lo requiere. Aprende continuamente de cada interacción para mejorar sus respuestas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span>¿Puedo personalizar las respuestas de la IA?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Durante la configuración, personalizamos el tono, estilo, y personalidad de la IA para que refleje tu marca. Puedes definir respuestas específicas, políticas, precios, promociones, y cualquier información relevante. La IA se adapta completamente a tu forma de comunicarte con tus clientes.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                    <button class="faq-question">
+                        <span>¿Qué pasa si la IA no puede responder algo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA está programada para reconocer cuándo una consulta requiere intervención humana. En esos casos, escala el caso a tu equipo con toda la información de contexto, notifica al personal apropiado, y mantiene al cliente informado del proceso. Nunca deja a un cliente sin respuesta.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question">
+                        <span>¿Ofrecen garantía de resultados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Todos nuestros planes incluyen 30 días de garantía de satisfacción. Si durante el primer mes no ves mejoras medibles en tu operación, te devolvemos el 100% de tu inversión. Además, establecemos KPIs claros desde el inicio para medir el ROI de forma transparente.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+                    <button class="faq-question">
+                        <span>¿Es seguro? ¿Qué pasa con los datos de mis clientes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La seguridad es nuestra prioridad. Todos los datos están encriptados end-to-end, cumplimos con GDPR y normativas locales de protección de datos. Usamos servidores seguros certificados y nunca compartimos información de clientes con terceros. Tú mantienes control total sobre tus datos en todo momento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contacto">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">¿Listo para dejar de operar y empezar a <span class="gradient-text">dirigir</span>?</h2>
+                <p class="cta-subtitle">Da el primer paso hacia la eficiencia total. Agenda tu diagnóstico gratuito y sin compromiso.</p>
+                <div class="cta-form">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" required placeholder="Mi Negocio SA">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="juan@minegocio.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono (WhatsApp)</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="+54 9 11 1234-5678">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="industria">Industria</label>
+                            <select id="industria" name="industria" required>
+                                <option value="">Selecciona tu industria</option>
+                                <option value="hotel">Hotel / Hostal</option>
+                                <option value="restaurante">Restaurante / Bar</option>
+                                <option value="clinica">Clínica / Consultorio</option>
+                                <option value="spa">Spa / Centro de Estética</option>
+                                <option value="fitness">Gimnasio / Centro Deportivo</option>
+                                <option value="otro">Otra industria</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos sobre tu negocio (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej: Tenemos un restaurante de 50 mesas y recibimos ~200 consultas por WhatsApp al día..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Agendar Diagnóstico Gratuito
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Tus datos están seguros. No compartimos información con terceros.
+                        </p>
+                    </form>
+                    <div class="cta-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diagnóstico personalizado de 45 minutos</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Plan de automatización a medida</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sin compromiso ni tarjeta de crédito</span>
+                        </div>
+                        <p class="limited-spots">
+                            <i class="fas fa-users"></i> Plazas limitadas cada semana para garantizar la calidad del análisis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>AIBA</span>
+                    </div>
+                    <p class="footer-description">
+                        Automatización inteligente para empresas. Construyendo el futuro de los negocios, una automatización a la vez.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#como-funciona">Cómo Funciona</a></li>
+                        <li><a href="#industrias">Industrias</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#testimonios">Casos de Éxito</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industrias</h4>
+                    <ul>
+                        <li><a href="#industrias">Hoteles y Hostales</a></li>
+                        <li><a href="#industrias">Restaurantes</a></li>
+                        <li><a href="#industrias">Clínicas y Consultorios</a></li>
+                        <li><a href="#industrias">Spa y Estética</a></li>
+                        <li><a href="#industrias">Fitness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación API</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AIBA (AI Business Automation). Todos los derechos reservados.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-shield-alt"></i> SSL Seguro</span>
+                    <span><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+                    <span><i class="fas fa-lock"></i> ISO 27001</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- Simple AOS (Animate On Scroll) -->
+    <script>
+        // Simple AOS implementation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('[data-aos]');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
