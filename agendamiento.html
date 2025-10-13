@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda tu consultoría gratuita con AIBA. Descubre en 30 minutos cómo podemos impulsar tu negocio con automatización inteligente.">
+    <meta name="keywords" content="agendamiento, consultoría, AIBA, automatización, IA, diagnóstico gratuito">
+    
+    <title>Agenda tu Consultoría Gratuita - AIBA</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA Logo" class="logo-image">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#problemas" class="nav-link">Problemas</a></li>
+                    <li><a href="index.html#como-funciona" class="nav-link">Cómo Funciona</a></li>
+                    <li><a href="index.html#industrias" class="nav-link">Industrias</a></li>
+                    <li><a href="index.html#precios" class="nav-link">Precios</a></li>
+                    <li><a href="index.html#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary btn-nav">Agendar Diagnóstico</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="agendamiento-hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Consultoría Gratuita</span>
+                </div>
+                <h1 class="hero-title">
+                    📅 <span class="gradient-text">Agenda tu Consultoría Gratuita</span> y Descubre Cómo Podemos Ayudarte
+                </h1>
+                <p class="hero-subtitle">
+                    Reserva tu sesión gratuita y descubre en <strong>30 minutos</strong> cómo podemos impulsar tu negocio con estrategias innovadoras y automatización inteligente.
+                </p>
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Análisis personalizado de tu negocio</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Plan de automatización a medida</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sin compromiso ni tarjeta de crédito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Section -->
+    <section class="scheduling-section" id="contacto">
+        <div class="container">
+            <div class="scheduling-content">
+                <!-- Left Side - Calendar Widget -->
+                <div class="calendar-widget">
+                    <div class="widget-header">
+                        <h3>Selecciona tu horario preferido</h3>
+                        <p>Elige la fecha y hora que mejor se adapte a tu agenda</p>
+                    </div>
+                    
+                    <!-- Calendar Placeholder (Integrar con Calendly o similar) -->
+                    <div class="calendar-placeholder">
+                        <div class="calendar-note">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>Calendario Interactivo</h4>
+                            <p>Selecciona tu fecha y hora preferida</p>
+                            <div class="calendar-demo">
+                                <div class="calendar-grid">
+                                    <div class="calendar-header">
+                                        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                                    </div>
+                                    <div class="calendar-days">
+                                        <div class="day disabled">28</div>
+                                        <div class="day disabled">29</div>
+                                        <div class="day disabled">30</div>
+                                        <div class="day disabled">31</div>
+                                        <div class="day available" data-day="1">1</div>
+                                        <div class="day available" data-day="2">2</div>
+                                        <div class="day available" data-day="3">3</div>
+                                        <div class="day available" data-day="4">4</div>
+                                        <div class="day available" data-day="5">5</div>
+                                        <div class="day available" data-day="6">6</div>
+                                        <div class="day available" data-day="7">7</div>
+                                        <div class="day available" data-day="8">8</div>
+                                        <div class="day available" data-day="9">9</div>
+                                        <div class="day available" data-day="10">10</div>
+                                        <div class="day available" data-day="11">11</div>
+                                        <div class="day available" data-day="12">12</div>
+                                        <div class="day available" data-day="13">13</div>
+                                        <div class="day available" data-day="14">14</div>
+                                        <div class="day available" data-day="15">15</div>
+                                        <div class="day available" data-day="16">16</div>
+                                        <div class="day available" data-day="17">17</div>
+                                        <div class="day available" data-day="18">18</div>
+                                        <div class="day available" data-day="19">19</div>
+                                        <div class="day available" data-day="20">20</div>
+                                        <div class="day available" data-day="21">21</div>
+                                        <div class="day available" data-day="22">22</div>
+                                        <div class="day available" data-day="23">23</div>
+                                        <div class="day available" data-day="24">24</div>
+                                        <div class="day available" data-day="25">25</div>
+                                        <div class="day available" data-day="26">26</div>
+                                        <div class="day available" data-day="27">27</div>
+                                        <div class="day available" data-day="28">28</div>
+                                        <div class="day available" data-day="29">29</div>
+                                        <div class="day available" data-day="30">30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-slots">
+                                <h5>Horarios disponibles para hoy:</h5>
+                                <div class="slots-grid">
+                                    <button class="time-slot">9:00 AM</button>
+                                    <button class="time-slot">10:30 AM</button>
+                                    <button class="time-slot">2:00 PM</button>
+                                    <button class="time-slot">3:30 PM</button>
+                                    <button class="time-slot">4:00 PM</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="booking-form-container">
+                    <div class="form-header">
+                        <h3>Completa tu información</h3>
+                        <p>Para confirmar tu consultoría gratuita</p>
+                    </div>
+                    
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (WhatsApp) *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="+54 9 11 1234-5678">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required placeholder="Mi Empresa SA">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="industria">Industria *</label>
+                            <select id="industria" name="industria" required>
+                                <option value="">Selecciona tu industria</option>
+                                <option value="hotel">Hotel / Hostal</option>
+                                <option value="restaurante">Restaurante / Bar</option>
+                                <option value="clinica">Clínica / Consultorio</option>
+                                <option value="spa">Spa / Centro de Estética</option>
+                                <option value="fitness">Gimnasio / Centro Deportivo</option>
+                                <option value="otro">Otra industria</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tamaño">Tamaño de tu empresa</label>
+                            <select id="tamaño" name="tamaño">
+                                <option value="">Selecciona el tamaño</option>
+                                <option value="1-10">1-10 empleados</option>
+                                <option value="11-50">11-50 empleados</option>
+                                <option value="51-200">51-200 empleados</option>
+                                <option value="200+">Más de 200 empleados</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="problema">¿Cuál es tu mayor desafío actual? *</label>
+                            <select id="problema" name="problema" required>
+                                <option value="">Selecciona tu desafío principal</option>
+                                <option value="perdida-clientes">Pierdo clientes por no responder rápido</option>
+                                <option value="tiempo-gestion">Pierdo mucho tiempo en tareas repetitivas</option>
+                                <option value="organizacion-agenda">Mi agenda es un caos</option>
+                                <option value="crecimiento">Mi negocio no está creciendo</option>
+                                <option value="automatizacion">Quiero automatizar procesos</option>
+                                <option value="otro">Otro desafío</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos sobre tu negocio (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej: Tenemos un restaurante de 50 mesas y recibimos ~200 consultas por WhatsApp al día..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acepto" name="acepto" required>
+                                <span class="checkmark"></span>
+                                Acepto recibir información sobre AIBA y sus servicios
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Confirmar Consultoría Gratuita
+                        </button>
+                        
+                        <div class="form-note">
+                            <i class="fas fa-lock"></i>
+                            <span>Tu información está segura. No compartimos datos con terceros.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="expect-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Qué esperar</span>
+                <h2 class="section-title">En tu consultoría gratuita de 30 minutos</h2>
+                <p class="section-subtitle">Obtendrás insights valiosos y un plan personalizado para tu negocio</p>
+            </div>
+            
+            <div class="expect-grid">
+                <div class="expect-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="expect-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Análisis de tu Situación</h3>
+                    <p>Evaluamos tu operación actual, procesos y puntos de dolor para identificar oportunidades de mejora.</p>
+                </div>
+                
+                <div class="expect-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="expect-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Estrategias Personalizadas</h3>
+                    <p>Te mostramos soluciones específicas para tu industria y tipo de negocio, con casos de éxito similares.</p>
+                </div>
+                
+                <div class="expect-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="expect-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Plan de Implementación</h3>
+                    <p>Recibes un roadmap claro con pasos específicos para implementar la automatización en tu negocio.</p>
+                </div>
+                
+                <div class="expect-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="expect-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>ROI Estimado</h3>
+                    <p>Calculamos el retorno de inversión esperado y los ahorros que puedes obtener con AIBA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">¿Listo para transformar tu negocio?</h2>
+                <p class="cta-subtitle">Agenda tu consultoría gratuita ahora y descubre el potencial de la automatización inteligente.</p>
+                <div class="cta-stats">
+                    <div class="stat">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Minutos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Gratuito</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Compromiso</div>
+                    </div>
+                </div>
+                <a href="#contacto" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i>
+                    Agendar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA Logo" class="logo-image">
+                    </div>
+                    <p class="footer-description">
+                        Automatización inteligente para empresas. Construyendo el futuro de los negocios, una automatización a la vez.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="index.html#como-funciona">Cómo Funciona</a></li>
+                        <li><a href="index.html#industrias">Industrias</a></li>
+                        <li><a href="index.html#precios">Precios</a></li>
+                        <li><a href="index.html#testimonios">Casos de Éxito</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industrias</h4>
+                    <ul>
+                        <li><a href="index.html#industrias">Hoteles y Hostales</a></li>
+                        <li><a href="index.html#industrias">Restaurantes</a></li>
+                        <li><a href="index.html#industrias">Clínicas y Consultorios</a></li>
+                        <li><a href="index.html#industrias">Spa y Estética</a></li>
+                        <li><a href="index.html#industrias">Fitness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación API</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AIBA (AI Business Automation). Todos los derechos reservados.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-shield-alt"></i> SSL Seguro</span>
+                    <span><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+                    <span><i class="fas fa-lock"></i> ISO 27001</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- Simple AOS (Animate On Scroll) -->
+    <script>
+        // Simple AOS implementation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('[data-aos]');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Calendar functionality
+            initializeCalendar();
+            initializeBookingForm();
+        });
+        
+        function initializeCalendar() {
+            const days = document.querySelectorAll('.day.available');
+            const timeSlots = document.querySelectorAll('.time-slot');
+            
+            days.forEach(day => {
+                day.addEventListener('click', function() {
+                    days.forEach(d => d.classList.remove('selected'));
+                    this.classList.add('selected');
+                    
+                    // Show time slots for selected day
+                    timeSlots.forEach(slot => {
+                        slot.classList.add('visible');
+                    });
+                });
+            });
+            
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function() {
+                    timeSlots.forEach(s => s.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+        }
+        
+        function initializeBookingForm() {
+            const form = document.getElementById('bookingForm');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Confirmando...';
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showNotification('¡Consultoría agendada exitosamente! Te enviaremos un email de confirmación.', 'success');
+                    form.reset();
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+        
+        function showNotification(message, type = 'info') {
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="notification-close" onclick="this.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            Object.assign(notification.style, {
+                position: 'fixed',
+                top: '100px',
+                right: '20px',
+                background: type === 'success' ? '#10b981' : '#ef4444',
+                color: 'white',
+                padding: '1rem 1.5rem',
+                borderRadius: '12px',
+                boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                zIndex: '10000',
+                animation: 'slideInRight 0.3s ease',
+                maxWidth: '400px'
+            });
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

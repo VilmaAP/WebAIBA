@@ -594,7 +594,7 @@ img {
 
 .problems-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -616,7 +616,7 @@ img {
 .problem-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(6, 182, 212, 0.2) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -626,7 +626,7 @@ img {
 
 .problem-icon i {
     font-size: 2rem;
-    color: var(--danger-color);
+    color: var(--primary-color);
 }
 
 .problem-card h3 {
@@ -652,8 +652,8 @@ img {
 }
 
 .impact-badge.negative {
-    background: rgba(239, 68, 68, 0.1);
-    color: var(--danger-color);
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--primary-color);
 }
 
 /* ===========================
@@ -1587,6 +1587,450 @@ img {
 }
 
 /* ===========================
+   Agendamiento Page Styles
+   =========================== */
+
+.agendamiento-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.agendamiento-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%2314b8a6" opacity="0.1"/></svg>') repeat;
+    background-size: 50px 50px;
+    animation: float 20s ease-in-out infinite;
+}
+
+.agendamiento-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-benefits {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.benefit-item i {
+    color: var(--success-color);
+    font-size: 1.125rem;
+}
+
+/* Scheduling Section */
+.scheduling-section {
+    padding: var(--section-padding);
+    background: white;
+}
+
+.scheduling-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Calendar Widget */
+.calendar-widget {
+    background: var(--bg-secondary);
+    padding: 2.5rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.widget-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.widget-header h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.widget-header p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.calendar-placeholder {
+    background: white;
+    border-radius: var(--element-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.calendar-note {
+    text-align: center;
+}
+
+.calendar-note i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.calendar-note h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.calendar-note p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Calendar Demo */
+.calendar-demo {
+    margin-bottom: 2rem;
+}
+
+.calendar-grid {
+    background: white;
+    border-radius: var(--element-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.calendar-header span {
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border-color);
+}
+
+.day {
+    padding: 1rem 0.5rem;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-weight: 500;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day:hover {
+    background: var(--primary-light);
+    color: white;
+}
+
+.day.available {
+    color: var(--text-primary);
+}
+
+.day.available:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.day.selected {
+    background: var(--primary-color);
+    color: white;
+}
+
+.day.disabled {
+    color: var(--text-tertiary);
+    cursor: not-allowed;
+    background: var(--bg-tertiary);
+}
+
+/* Time Slots */
+.time-slots {
+    margin-top: 2rem;
+}
+
+.time-slots h5 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.time-slot {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--element-radius);
+    background: white;
+    color: var(--text-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.time-slot.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.time-slot:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.time-slot.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Booking Form */
+.booking-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid var(--border-color);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-header p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.checkbox-group {
+    margin: 1rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+    transition: var(--transition-base);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Expect Section */
+.expect-section {
+    padding: var(--section-padding);
+    background: var(--bg-secondary);
+}
+
+.expect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.expect-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--card-radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.expect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
+.expect-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.expect-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.expect-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.expect-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* CTA Section for Agendamiento */
+.cta-section .cta-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.cta-section .stat {
+    text-align: center;
+}
+
+.cta-section .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.cta-section .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive for Agendamiento */
+@media (max-width: 1024px) {
+    .scheduling-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .calendar-widget {
+        order: 2;
+    }
+    
+    .booking-form-container {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-benefits {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .calendar-widget,
+    .booking-form-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-section .cta-stats {
+        gap: 2rem;
+    }
+    
+    .expect-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .agendamiento-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .slots-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section .cta-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* ===========================
    Responsive Design
    =========================== */
 
@@ -1594,6 +2038,11 @@ img {
     .hero-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+    
+    .problems-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .hero-image {
@@ -1616,6 +2065,11 @@ img {
 @media (max-width: 768px) {
     .container {
         padding: 0 1.5rem;
+    }
+    
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .nav-menu {
@@ -1733,5 +2187,284 @@ img {
     .trust-badges {
         flex-direction: column;
         gap: 0.75rem;
+    }
+}
+
+/* ===========================
+   WhatsApp Widget Styles
+   =========================== */
+
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
+
+.whatsapp-bubble {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e5e7eb;
+}
+
+.whatsapp-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.whatsapp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+.whatsapp-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp-logo img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.whatsapp-logo span {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.whatsapp-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.whatsapp-message {
+    padding: 20px;
+    background: #f8fafc;
+}
+
+.whatsapp-message p {
+    margin: 0;
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 16px 20px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 0 0 16px 16px;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-button:hover {
+    background: #128c7e;
+    color: white;
+}
+
+.whatsapp-trigger {
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.whatsapp-trigger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-trigger i {
+    color: white;
+    font-size: 24px;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: #1f2937;
+}
+
+.whatsapp-trigger:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animation for the trigger */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-trigger {
+    animation: pulse 2s infinite;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .whatsapp-widget {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-bubble {
+        width: 280px;
+        right: -10px;
+    }
+    
+    .whatsapp-trigger {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-trigger i {
+        font-size: 20px;
+    }
+    
+    .whatsapp-tooltip {
+        right: 60px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-bubble {
+        width: calc(100vw - 30px);
+        right: -15px;
+        left: 15px;
+    }
+    
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* ===========================
+   Form Preview Styles
+   =========================== */
+
+.cta-form-content {
+    text-align: center;
+}
+
+.form-preview {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e2e8f0;
+}
+
+.form-preview h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.form-requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.form-requirements li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.form-requirements i {
+    color: var(--success-color);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .form-requirements {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-preview {
+        padding: 1.5rem;
     }
 }

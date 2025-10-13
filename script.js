@@ -658,3 +658,81 @@ document.addEventListener('DOMContentLoaded', () => {
         if (emailInput) emailInput.value = urlParams.get('email');
     }
 });
+
+// ===========================
+// WhatsApp Widget
+// ===========================
+
+const whatsappWidget = document.getElementById('whatsappWidget');
+const whatsappBubble = document.getElementById('whatsappBubble');
+const whatsappTrigger = document.getElementById('whatsappTrigger');
+const whatsappClose = document.getElementById('whatsappClose');
+
+let isBubbleOpen = false;
+
+// Toggle bubble visibility
+function toggleBubble() {
+    isBubbleOpen = !isBubbleOpen;
+    
+    if (isBubbleOpen) {
+        whatsappBubble.classList.add('show');
+        whatsappTrigger.style.transform = 'scale(1.1)';
+    } else {
+        whatsappBubble.classList.remove('show');
+        whatsappTrigger.style.transform = 'scale(1)';
+    }
+}
+
+// Event listeners
+if (whatsappTrigger) {
+    whatsappTrigger.addEventListener('click', toggleBubble);
+}
+
+if (whatsappClose) {
+    whatsappClose.addEventListener('click', () => {
+        isBubbleOpen = false;
+        whatsappBubble.classList.remove('show');
+        whatsappTrigger.style.transform = 'scale(1)';
+    });
+}
+
+// Close bubble when clicking outside
+document.addEventListener('click', (e) => {
+    if (isBubbleOpen && !whatsappWidget.contains(e.target)) {
+        isBubbleOpen = false;
+        whatsappBubble.classList.remove('show');
+        whatsappTrigger.style.transform = 'scale(1)';
+    }
+});
+
+// Auto-show bubble after 10 seconds on first visit
+let hasShownAutoBubble = localStorage.getItem('aiba_whatsapp_shown');
+if (!hasShownAutoBubble) {
+    setTimeout(() => {
+        if (!isBubbleOpen) {
+            toggleBubble();
+            localStorage.setItem('aiba_whatsapp_shown', 'true');
+        }
+    }, 10000); // 10 seconds
+}
+
+// Track WhatsApp clicks for analytics
+const whatsappButton = document.querySelector('.whatsapp-button');
+if (whatsappButton) {
+    whatsappButton.addEventListener('click', () => {
+        // Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'whatsapp_click', {
+                event_category: 'engagement',
+                event_label: 'WhatsApp Widget'
+            });
+        }
+        
+        // Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact');
+        }
+        
+        console.log('📱 WhatsApp click tracked');
+    });
+}
