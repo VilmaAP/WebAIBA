@@ -191,7 +191,7 @@
                 </div>
                 <div class="problem-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="problem-icon">
-                        <i class="fas fa-chart-line-down"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Pérdida de Ventas</h3>
                     <p>No tienes tiempo para hacer seguimiento a leads calientes y muchas oportunidades se enfrían.</p>
@@ -459,11 +459,11 @@
                         </div>
                     </div>
                 </div>
-                <button class="slider-btn prev-btn" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
+                <button class="slider-btn prev-btn" id="prevBtn" style="background: linear-gradient(135deg, #14b8a6, #10b981); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3); transition: all 0.3s ease; cursor: pointer;">
+                    <i class="fas fa-chevron-left" style="font-size: 18px;"></i>
                 </button>
-                <button class="slider-btn next-btn" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
+                <button class="slider-btn next-btn" id="nextBtn" style="background: linear-gradient(135deg, #14b8a6, #10b981); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3); transition: all 0.3s ease; cursor: pointer;">
+                    <i class="fas fa-chevron-right" style="font-size: 18px;"></i>
                 </button>
                 <div class="slider-dots" id="sliderDots"></div>
             </div>
@@ -686,6 +686,26 @@
             <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
         </div>
     </div>
+
+    <!-- Estilos adicionales para las flechas y testimonios -->
+    <style>
+        .slider-btn:hover {
+            background: linear-gradient(135deg, #0f766e, #059669) !important;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.5) !important;
+        }
+        
+        .author-info {
+            text-align: center;
+        }
+        
+        .testimonial-author {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
 
     <!-- Scripts -->
     <script src="script.js"></script>
