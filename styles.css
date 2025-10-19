@@ -330,6 +330,7 @@ img {
     align-items: center;
     padding-top: 80px;
     overflow: hidden;
+    background: #f8fafc;
 }
 
 .hero-background {
@@ -1037,6 +1038,13 @@ img {
     background: var(--bg-secondary);
 }
 
+.testimonials-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
 .testimonials-slider {
     position: relative;
     overflow: hidden;
@@ -1165,6 +1173,7 @@ img {
     font-size: 1.25rem;
     transition: var(--transition-base);
     box-shadow: var(--shadow-md);
+    z-index: 100;
 }
 
 .slider-btn:hover {
@@ -1174,18 +1183,19 @@ img {
 }
 
 .prev-btn {
-    left: -24px;
+    left: 5px;
 }
 
 .next-btn {
-    right: -24px;
+    right: 5px;
 }
 
 .slider-dots {
     display: flex;
     justify-content: center;
     gap: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .dot {
@@ -2038,6 +2048,7 @@ img {
     .hero-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+        background: transparent;
     }
     
     .problems-grid {
@@ -2045,7 +2056,7 @@ img {
         gap: 1.5rem;
     }
     
-    .hero-image {
+    .hero-text {
         order: -1;
     }
     
@@ -2065,6 +2076,14 @@ img {
 @media (max-width: 768px) {
     .container {
         padding: 0 1.5rem;
+    }
+    
+    .hero {
+        background: #f8fafc;
+    }
+    
+    .hero-content {
+        background: transparent;
     }
     
     .problems-grid {
@@ -2148,6 +2167,10 @@ img {
     
     .slider-btn {
         display: none;
+    }
+    
+    .testimonials-wrapper {
+        padding: 0 1rem;
     }
     
     .footer-content {
@@ -2383,7 +2406,7 @@ img {
     
     .whatsapp-bubble {
         width: 280px;
-        right: -10px;
+        right: 10px;
     }
     
     .whatsapp-trigger {
@@ -2405,8 +2428,8 @@ img {
 @media (max-width: 480px) {
     .whatsapp-bubble {
         width: calc(100vw - 30px);
-        right: -15px;
-        left: 15px;
+        right: 15px;
+        left: auto;
     }
     
     .whatsapp-tooltip {
