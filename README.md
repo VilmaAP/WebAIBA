@@ -101,13 +101,6 @@ git push -u origin main
 
 # Activa GitHub Pages en Settings > Pages
 ```
-
-#### Opción 2: Netlify
-```bash
-# Arrastra la carpeta directamente a Netlify Drop
-# O conecta tu repositorio de GitHub
-```
-
 #### Opción 3: Vercel
 ```bash
 npm i -g vercel

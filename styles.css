@@ -2084,6 +2084,11 @@ img {
     
     .hero-content {
         background: transparent;
+        padding-top: 2rem;
+    }
+    
+    .hero-title {
+        margin-top: 1.5rem;
     }
     
     .problems-grid {
@@ -2193,6 +2198,14 @@ img {
 @media (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+    
+    .hero-content {
+        padding-top: 2.5rem;
+    }
+    
+    .hero-title {
+        margin-top: 2rem;
     }
     
     .section-header {
