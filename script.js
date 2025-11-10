@@ -6,6 +6,69 @@ const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
+const themeToggle = document.getElementById('themeToggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const THEME_STORAGE_KEY = 'aiba-theme';
+
+function applyTheme(theme, options = {}) {
+    const { announce = true } = options;
+    const isDark = theme === 'dark';
+    
+    document.body.classList.toggle('dark-mode', isDark);
+    
+    if (themeToggle) {
+        themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i>`;
+        const label = isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+        themeToggle.setAttribute('aria-label', label);
+        themeToggle.setAttribute('title', label);
+    }
+    
+    if (announce && typeof announceToScreenReader === 'function') {
+        announceToScreenReader(`Modo ${isDark ? 'oscuro' : 'claro'} activado`);
+    }
+}
+
+function getStoredTheme() {
+    try {
+        return localStorage.getItem(THEME_STORAGE_KEY);
+    } catch (error) {
+        console.warn('No se pudo acceder a localStorage para leer el tema.', error);
+        return null;
+    }
+}
+
+function storeTheme(theme) {
+    try {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch (error) {
+        console.warn('No se pudo acceder a localStorage para guardar el tema.', error);
+    }
+}
+
+const storedTheme = getStoredTheme();
+const initialTheme = storedTheme || 'light';
+applyTheme(initialTheme, { announce: false });
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        const newTheme = isDark ? 'light' : 'dark';
+        applyTheme(newTheme);
+        storeTheme(newTheme);
+    });
+}
+
+const handleSchemeChange = () => {
+    if (!getStoredTheme()) {
+        applyTheme('light', { announce: false });
+    }
+};
+
+if (typeof prefersDarkScheme.addEventListener === 'function') {
+    prefersDarkScheme.addEventListener('change', handleSchemeChange);
+} else if (typeof prefersDarkScheme.addListener === 'function') {
+    prefersDarkScheme.addListener(handleSchemeChange);
+}
 
 // Sticky navbar on scroll
 window.addEventListener('scroll', () => {

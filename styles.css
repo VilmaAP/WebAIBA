@@ -27,6 +27,7 @@
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
     --border-color: #e5e7eb;
+    --surface-card: #ffffff;
     
     /* Dark mode (optional) */
     --dark-bg: #111827;
@@ -68,6 +69,270 @@ body {
     background-color: var(--bg-primary);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+body.dark-mode {
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #94a3b8;
+    --bg-primary: #0f172a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1f2937;
+    --border-color: rgba(148, 163, 184, 0.35);
+    --surface-card: #1f2937;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body.dark-mode p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .navbar {
+    background: rgba(17, 24, 39, 0.9);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(17, 24, 39, 0.95);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .nav-link.active,
+body.dark-mode .nav-link:hover {
+    color: var(--text-primary);
+}
+
+body.dark-mode .nav-menu {
+    background: rgba(17, 24, 39, 0.98);
+}
+
+body.dark-mode .hamburger span {
+    background: #e5e7eb;
+}
+
+body.dark-mode .hero {
+    background: #0f172a;
+}
+
+body.dark-mode .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .stat-label,
+body.dark-mode .trust-badges span,
+body.dark-mode .section-subtitle,
+body.dark-mode .industry-features li,
+body.dark-mode .benefit-item,
+body.dark-mode .limited-spots,
+body.dark-mode .testimonial-text {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .limited-spots {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    color: var(--text-primary);
+    box-shadow: 0 12px 25px rgba(8, 11, 22, 0.45);
+}
+
+body.dark-mode .limited-spots i {
+    color: #fbbf24;
+}
+
+body.dark-mode .problem-card,
+body.dark-mode .workflow-step,
+body.dark-mode .feature-card,
+body.dark-mode .industry-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .faq-item,
+body.dark-mode .faq-question,
+body.dark-mode .cta-content-wrapper,
+body.dark-mode .cta-form,
+body.dark-mode .calendar-widget,
+body.dark-mode .calendar-placeholder,
+body.dark-mode .calendar-grid,
+body.dark-mode .booking-form-container,
+body.dark-mode .expect-card,
+body.dark-mode .form-preview,
+body.dark-mode .chat-bubble,
+body.dark-mode .stat-item,
+body.dark-mode .pricing-card,
+body.dark-mode .pricing-note,
+body.dark-mode .workflow-demo {
+    background: var(--surface-card);
+    color: var(--text-primary);
+    box-shadow: 0 20px 45px rgba(8, 11, 22, 0.45);
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .pricing-card.featured {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .workflow-step,
+body.dark-mode .stat-item {
+    border: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .industry-content {
+    background: transparent;
+}
+
+body.dark-mode .testimonial-card {
+    border: 2px solid rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .faq-question {
+    color: var(--text-primary);
+}
+
+body.dark-mode .faq-answer {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .faq-answer p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .section-badge {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    color: #5eead4;
+}
+
+body.dark-mode .slider-btn {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(94, 234, 212, 0.4);
+    color: #5eead4;
+}
+
+body.dark-mode .dot {
+    background: rgba(148, 163, 184, 0.4);
+}
+
+body.dark-mode .dot.active {
+    background: #5eead4;
+}
+
+body.dark-mode .nav-menu .btn-primary {
+    box-shadow: 0 12px 30px rgba(20, 184, 166, 0.4);
+}
+
+body.dark-mode .cta-note {
+    background: rgba(15, 23, 42, 0.5) !important;
+    color: var(--text-secondary);
+}
+
+body.dark-mode .cta-content-wrapper {
+    border: 1px solid rgba(94, 234, 212, 0.15);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea,
+body.dark-mode .time-slot,
+body.dark-mode .day {
+    background: var(--bg-tertiary);
+    border-color: rgba(148, 163, 184, 0.35);
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+body.dark-mode .time-slot.selected,
+body.dark-mode .day.selected {
+    color: white;
+}
+
+body.dark-mode .whatsapp-bubble {
+    background: var(--surface-card);
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+body.dark-mode .whatsapp-message {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .whatsapp-message p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .whatsapp-button {
+    border-radius: 0 0 16px 16px;
+}
+
+body.dark-mode .hero-background .gradient-bg {
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
+}
+
+body.dark-mode .workflow-demo {
+    border: 1px solid rgba(94, 234, 212, 0.15);
+}
+
+body.dark-mode .pricing-card {
+    border: 2px solid rgba(148, 163, 184, 0.25);
+}
+
+body.dark-mode .problems,
+body.dark-mode .industries,
+body.dark-mode .testimonials,
+body.dark-mode .cta-section,
+body.dark-mode .pricing {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .how-it-works,
+body.dark-mode .faq,
+body.dark-mode .pricing-note,
+body.dark-mode .pricing .section-header,
+body.dark-mode .cta-section .cta-content {
+    background: var(--bg-primary);
+}
+
+body.dark-mode .section-title {
+    color: var(--text-primary);
+}
+
+body.dark-mode .cta-section {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+body.dark-mode .cta-section::before {
+    content: none;
+}
+
+body.dark-mode .pricing-card:hover,
+body.dark-mode .problem-card:hover,
+body.dark-mode .workflow-step:hover,
+body.dark-mode .feature-card:hover,
+body.dark-mode .expect-card:hover {
+    box-shadow: 0 35px 60px rgba(8, 11, 22, 0.65);
+}
+
+body.dark-mode .calendar-header {
+    background: rgba(20, 184, 166, 0.15);
+    color: #5eead4;
+}
+
+body.dark-mode .calendar-days {
+    background: rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .calendar-note {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .notification {
+    box-shadow: 0 25px 60px rgba(8, 11, 22, 0.7) !important;
 }
 
 /* ===========================
@@ -270,6 +535,45 @@ img {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle-btn i {
+    font-size: 1rem;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(20, 184, 166, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+body.dark-mode .theme-toggle-btn {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(94, 234, 212, 0.3);
+    color: var(--text-secondary);
+    box-shadow: 0 10px 20px rgba(8, 11, 22, 0.45);
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+    color: #f8fafc;
+    border-color: #5eead4;
+    background: rgba(20, 184, 166, 0.15);
 }
 
 .nav-list {
@@ -2109,6 +2413,10 @@ img {
         box-shadow: var(--shadow-xl);
     }
     
+    body.dark-mode .nav-menu {
+        background: rgba(17, 24, 39, 0.98);
+    }
+    
     .nav-menu.active {
         left: 0;
     }
@@ -2122,6 +2430,20 @@ img {
         padding: 1rem 0;
         width: 100%;
         border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-menu .theme-toggle-btn {
+        width: 100%;
+        border-radius: var(--element-radius);
+        height: auto;
+        padding: 0.75rem 1rem;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .nav-menu .theme-toggle-btn i {
+        font-size: 1.1rem;
     }
     
     .hamburger {
