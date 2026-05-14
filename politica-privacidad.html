@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de AIBA Labs - Tratamiento de datos personales conforme a la Ley 19.628 y la Ley 21.719 de Chile.">
+    <meta name="robots" content="noindex, follow">
+
+    <title>Política de Privacidad | AIBA Labs</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #14b8a6;
+            --primary-dark: #0f766e;
+            --secondary: #059669;
+            --text-dark: #0f172a;
+            --text-mid: #334155;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-mid);
+            line-height: 1.7;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            padding: 24px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 24px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-info i {
+            color: var(--primary);
+        }
+
+        /* Content */
+        .content {
+            padding: 60px 0 80px;
+        }
+
+        .intro-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 48px;
+        }
+
+        .intro-box p {
+            color: var(--text-mid);
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 48px 0 20px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 .section-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 28px 0 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 16px 0 16px 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        li strong {
+            color: var(--text-dark);
+        }
+
+        a {
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            border: 1px solid #99f6e4;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .right-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .right-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.1);
+        }
+
+        .right-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .right-card-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .right-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .right-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin: 32px 0;
+        }
+
+        .contact-card h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+        }
+
+        .contact-card a {
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .contact-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-list li {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-list i {
+            width: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            .meta-info {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA Logo" class="logo-image">
+                </a>
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Volver al sitio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Política de Privacidad</h1>
+            <p class="hero-subtitle">
+                Cómo recopilamos, usamos y protegemos la información personal en AIBA Labs. Conforme a la Ley N° 19.628 sobre Protección de la Vida Privada y a la Ley N° 21.719 sobre Protección de Datos Personales de Chile.
+            </p>
+            <div class="meta-info">
+                <span><i class="fas fa-calendar-alt"></i> Última actualización: 14 de mayo de 2026</span>
+                <span><i class="fas fa-shield-alt"></i> Versión 1.0</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content">
+        <div class="container">
+
+            <div class="intro-box">
+                <p>
+                    En <strong>AIBA Labs</strong> ("AIBA", "nosotros") creemos que la privacidad es un derecho fundamental. Esta política explica de forma clara qué datos personales recopilamos cuando interactúas con nuestro sitio web o contratas nuestros servicios de automatización con inteligencia artificial, cómo los utilizamos, con quién los compartimos, durante cuánto tiempo los conservamos y qué derechos tienes sobre ellos.
+                </p>
+            </div>
+
+            <!-- Sección 1 -->
+            <h2><span class="section-number">1</span> Quiénes somos</h2>
+            <p>
+                AIBA Labs es una agencia de automatización con inteligencia artificial que diseña, implementa y opera sistemas conversacionales, integraciones de CRM y flujos de automatización para empresas, principalmente en los sectores inmobiliario y de salud. Operamos desde Chile y prestamos servicios a clientes en Latinoamérica.
+            </p>
+            <p>
+                Para efectos de esta política, AIBA Labs es el proyecto y marca bajo la cual se prestan los servicios descritos en aibalabs.ai. Para cualquier consulta relacionada con el tratamiento de tus datos personales, puedes escribirnos a <a href="mailto:contacto@aibalabs.ai">contacto@aibalabs.ai</a>.
+            </p>
+
+            <!-- Sección 2 -->
+            <h2><span class="section-number">2</span> A quién aplica esta política</h2>
+            <p>Esta política se aplica a dos tipos de personas:</p>
+            <ul>
+                <li><strong>Visitantes y prospectos del sitio web</strong> (aibalabs.ai): personas que navegan, agendan un diagnóstico o se ponen en contacto con nosotros para conocer nuestros servicios.</li>
+                <li><strong>Clientes contratantes de servicios</strong>: empresas y profesionales que contratan a AIBA Labs para implementar sistemas de automatización en sus propios canales de atención (WhatsApp, CRM, agenda, etc.).</li>
+            </ul>
+            <div class="highlight-box">
+                <p>
+                    <strong><i class="fas fa-info-circle" style="color: var(--primary);"></i> Importante:</strong> Cuando AIBA Labs implementa un sistema para un cliente, los datos personales de los <em>usuarios finales</em> de ese cliente (por ejemplo, los pacientes de una clínica o los leads de una inmobiliaria) son tratados por AIBA en calidad de <strong>tercero mandatario o encargado del tratamiento</strong>. El responsable de esos datos sigue siendo el cliente contratante. Las condiciones específicas de ese tratamiento se regulan en el contrato de prestación de servicios firmado con cada cliente.
+                </p>
+            </div>
+
+            <!-- Sección 3 -->
+            <h2><span class="section-number">3</span> Qué datos recopilamos</h2>
+
+            <h3>3.1 Datos que entregas voluntariamente</h3>
+            <p>Cuando agendas un diagnóstico, completas un formulario o nos contactas, recopilamos:</p>
+            <ul>
+                <li>Nombre completo</li>
+                <li>Correo electrónico</li>
+                <li>Número de teléfono</li>
+                <li>Nombre de la empresa, cargo e industria</li>
+                <li>Información sobre tu operación que decidas compartir durante la conversación de diagnóstico</li>
+                <li>Cualquier dato adicional que envíes por canales como WhatsApp, LinkedIn o correo electrónico</li>
+            </ul>
+
+            <h3>3.2 Datos recopilados automáticamente</h3>
+            <p>Cuando navegas en aibalabs.ai, podemos recopilar de forma automática:</p>
+            <ul>
+                <li>Dirección IP y datos aproximados de ubicación</li>
+                <li>Tipo de navegador, sistema operativo y dispositivo</li>
+                <li>Páginas visitadas, tiempo en el sitio y origen del tráfico</li>
+                <li>Cookies y tecnologías similares con fines analíticos y de funcionalidad</li>
+            </ul>
+
+            <h3>3.3 Datos sensibles</h3>
+            <p>
+                No solicitamos ni necesitamos datos sensibles (salud, origen racial, opiniones políticas, vida sexual, datos biométricos, entre otros) para nuestros servicios comerciales. Si en el contexto de la prestación de servicios para un cliente debemos procesar datos sensibles de usuarios finales (por ejemplo, motivo de consulta médica en una clínica), aplicamos medidas reforzadas de seguridad y se rige por el contrato suscrito con el cliente responsable.
+            </p>
+
+            <!-- Sección 4 -->
+            <h2><span class="section-number">4</span> Para qué usamos tus datos</h2>
+            <p>Tratamos tu información personal únicamente para las siguientes finalidades:</p>
+            <ul>
+                <li><strong>Atender tu solicitud</strong>: responder consultas, agendar diagnósticos, enviar propuestas comerciales.</li>
+                <li><strong>Prestar los servicios contratados</strong>: implementar, mantener y soportar las soluciones de automatización acordadas.</li>
+                <li><strong>Comunicaciones del servicio</strong>: enviarte información operativa, actualizaciones, recordatorios de reuniones agendadas y soporte técnico.</li>
+                <li><strong>Mejorar nuestro sitio y servicios</strong>: analizar el uso del sitio para optimizar la experiencia y nuestros contenidos.</li>
+                <li><strong>Cumplimiento legal</strong>: cumplir obligaciones tributarias, contables y legales aplicables en Chile.</li>
+                <li><strong>Comunicaciones de marketing</strong>: solo si nos has autorizado expresamente a hacerlo, podemos enviarte contenidos, casos de uso o novedades sobre automatización con IA. Puedes darte de baja en cualquier momento.</li>
+            </ul>
+            <p>
+                No utilizamos tus datos para fines distintos de los aquí señalados sin obtener tu consentimiento previo, salvo cuando una ley así lo autorice u obligue.
+            </p>
+
+            <!-- Sección 5 -->
+            <h2><span class="section-number">5</span> Base legal del tratamiento</h2>
+            <p>De acuerdo con la Ley N° 19.628 (reformada por la Ley N° 21.719), nuestro tratamiento de datos personales se basa en:</p>
+            <ul>
+                <li><strong>Tu consentimiento expreso</strong> al completar formularios, agendar reuniones o iniciar contacto con nosotros.</li>
+                <li><strong>La ejecución de un contrato</strong> o de medidas precontractuales solicitadas por ti.</li>
+                <li><strong>El cumplimiento de obligaciones legales</strong> aplicables.</li>
+                <li><strong>Nuestro interés legítimo</strong> en operar, mejorar y dar a conocer nuestros servicios, siempre respetando tus derechos fundamentales.</li>
+            </ul>
+
+            <!-- Sección 6 -->
+            <h2><span class="section-number">6</span> Con quién compartimos tus datos</h2>
+            <p>
+                AIBA Labs <strong>no vende</strong> tus datos personales. Tampoco los compartimos con terceros con fines comerciales propios de esos terceros.
+            </p>
+            <p>
+                Para poder operar, sí trabajamos con proveedores tecnológicos que actúan como subencargados del tratamiento, sujetos a obligaciones contractuales de confidencialidad y seguridad. Las categorías de proveedores con las que trabajamos incluyen:
+            </p>
+            <ul>
+                <li><strong>Proveedores de inteligencia artificial y modelos de lenguaje</strong> para procesar consultas y generar respuestas automatizadas.</li>
+                <li><strong>Proveedores de mensajería y APIs de WhatsApp</strong> para enviar y recibir mensajes.</li>
+                <li><strong>Plataformas de bases de datos y almacenamiento en la nube</strong> para guardar conversaciones y registros operativos.</li>
+                <li><strong>Plataformas de automatización e integración</strong> para conectar sistemas entre sí.</li>
+                <li><strong>Sistemas de CRM</strong> para gestionar contactos y oportunidades comerciales.</li>
+                <li><strong>Servicios de calendario y agendamiento</strong> para coordinar reuniones.</li>
+                <li><strong>Servicios de hosting, dominio y entrega de contenido</strong> para mantener nuestros sitios y aplicaciones operativos.</li>
+                <li><strong>Servicios de correo electrónico y comunicación</strong> para responderte y enviarte información.</li>
+                <li><strong>Herramientas de analítica web</strong> para entender el uso del sitio.</li>
+            </ul>
+            <p>
+                Algunos de estos proveedores están ubicados fuera de Chile. En todos los casos seleccionamos proveedores que ofrezcan garantías adecuadas de protección de datos, conforme a estándares internacionales reconocidos.
+            </p>
+            <p>
+                También podríamos compartir información cuando una autoridad competente nos lo requiera por vía legal, o cuando sea necesario para defender nuestros derechos o los de terceros.
+            </p>
+
+            <!-- Sección 7 -->
+            <h2><span class="section-number">7</span> Transferencia internacional de datos</h2>
+            <p>
+                Dado que algunos de nuestros proveedores de infraestructura tecnológica operan desde otros países, tus datos pueden ser transferidos y almacenados fuera de Chile. En todos los casos exigimos que estas transferencias se realicen bajo condiciones que garanticen un nivel adecuado de protección, mediante cláusulas contractuales y medidas técnicas y organizativas alineadas con los estándares de la Ley N° 21.719 y, donde sea aplicable, con el Reglamento General de Protección de Datos europeo (GDPR).
+            </p>
+
+            <!-- Sección 8 -->
+            <h2><span class="section-number">8</span> Cuánto tiempo conservamos tus datos</h2>
+            <p>Conservamos tus datos personales solo durante el tiempo necesario para cumplir con las finalidades para las que fueron recopilados:</p>
+            <ul>
+                <li><strong>Prospectos sin contratación</strong>: hasta 24 meses desde el último contacto, salvo que solicites antes su eliminación.</li>
+                <li><strong>Clientes activos</strong>: mientras dure la relación contractual y por el plazo adicional requerido por obligaciones legales, tributarias o contables.</li>
+                <li><strong>Datos analíticos del sitio</strong>: hasta 26 meses, conforme a estándares habituales de herramientas de analítica web.</li>
+                <li><strong>Comunicaciones de marketing</strong>: hasta que retires tu consentimiento.</li>
+            </ul>
+            <p>
+                Cumplidos estos plazos, los datos son eliminados o anonimizados de forma segura.
+            </p>
+
+            <!-- Sección 9 -->
+            <h2><span class="section-number">9</span> Tus derechos</h2>
+            <p>Como titular de datos personales, la ley chilena te reconoce los siguientes derechos:</p>
+
+            <div class="rights-grid">
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-eye"></i></div>
+                        <h4>Acceso</h4>
+                    </div>
+                    <p>Conocer qué datos tuyos tratamos y cómo lo hacemos.</p>
+                </div>
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-edit"></i></div>
+                        <h4>Rectificación</h4>
+                    </div>
+                    <p>Corregir datos inexactos o desactualizados.</p>
+                </div>
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-trash-alt"></i></div>
+                        <h4>Cancelación</h4>
+                    </div>
+                    <p>Solicitar la eliminación de tus datos cuando ya no sean necesarios.</p>
+                </div>
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-ban"></i></div>
+                        <h4>Oposición</h4>
+                    </div>
+                    <p>Oponerte al tratamiento por motivos legítimos.</p>
+                </div>
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-download"></i></div>
+                        <h4>Portabilidad</h4>
+                    </div>
+                    <p>Recibir tus datos en formato estructurado y reutilizable.</p>
+                </div>
+                <div class="right-card">
+                    <div class="right-card-header">
+                        <div class="right-card-icon"><i class="fas fa-pause-circle"></i></div>
+                        <h4>Bloqueo</h4>
+                    </div>
+                    <p>Suspender temporalmente el tratamiento de tus datos.</p>
+                </div>
+            </div>
+
+            <p>
+                Para ejercer cualquiera de estos derechos, escríbenos a <a href="mailto:contacto@aibalabs.ai">contacto@aibalabs.ai</a> indicando tu nombre, los datos sobre los que ejerces el derecho y el detalle de tu solicitud. Responderemos en un plazo máximo de 30 días corridos.
+            </p>
+            <p>
+                Si consideras que no hemos atendido adecuadamente tu solicitud, una vez que la Agencia de Protección de Datos Personales de Chile se encuentre operativa, podrás presentar un reclamo ante ese organismo.
+            </p>
+
+            <!-- Sección 10 -->
+            <h2><span class="section-number">10</span> Cómo protegemos tus datos</h2>
+            <p>Adoptamos medidas técnicas y organizativas razonables para proteger tus datos personales, incluyendo:</p>
+            <ul>
+                <li>Conexiones cifradas mediante SSL/TLS en el sitio web y en las integraciones con APIs de terceros.</li>
+                <li>Almacenamiento en infraestructura en la nube de proveedores reconocidos, con respaldos y control de acceso.</li>
+                <li>Credenciales protegidas y rotación periódica de claves de acceso a sistemas críticos.</li>
+                <li>Principio de mínimo privilegio: cada miembro del equipo accede únicamente a los datos necesarios para su función.</li>
+                <li>Acuerdos de confidencialidad con colaboradores y proveedores.</li>
+                <li>Procedimientos de respuesta ante incidentes de seguridad.</li>
+            </ul>
+            <p>
+                Ninguna medida de seguridad es infalible. Si tomamos conocimiento de un incidente que afecte tus datos personales, te notificaremos en los plazos y condiciones que exija la normativa aplicable.
+            </p>
+
+            <!-- Sección 11 -->
+            <h2><span class="section-number">11</span> Cookies y tecnologías similares</h2>
+            <p>
+                Nuestro sitio puede usar cookies y tecnologías similares para recordar tus preferencias, medir el uso del sitio y mejorar tu experiencia. Puedes configurar tu navegador para rechazar cookies, aunque algunas funcionalidades podrían verse afectadas.
+            </p>
+
+            <!-- Sección 12 -->
+            <h2><span class="section-number">12</span> Menores de edad</h2>
+            <p>
+                Nuestros servicios están dirigidos a empresas y profesionales mayores de edad. No recopilamos intencionalmente datos personales de menores de 14 años. Si detectamos que se han obtenido datos de un menor sin la autorización correspondiente, procederemos a su eliminación.
+            </p>
+
+            <!-- Sección 13 -->
+            <h2><span class="section-number">13</span> Cambios a esta política</h2>
+            <p>
+                Podemos actualizar esta Política de Privacidad para reflejar cambios en nuestros servicios, en nuestra infraestructura tecnológica o en la normativa aplicable. Cuando realicemos cambios sustanciales, lo informaremos mediante un aviso destacado en el sitio o por correo electrónico. La fecha de "Última actualización" indicada al inicio refleja la versión vigente.
+            </p>
+
+            <!-- Sección 14 -->
+            <h2><span class="section-number">14</span> Contacto</h2>
+            <div class="contact-card">
+                <h3>¿Tienes preguntas o quieres ejercer un derecho?</h3>
+                <p>Estamos disponibles para responder cualquier consulta relacionada con esta política o con el tratamiento de tus datos personales.</p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@aibalabs.ai">contacto@aibalabs.ai</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56957620945" target="_blank">+56 9 5762 0945</a></li>
+                    <li><i class="fas fa-globe"></i> <a href="https://aibalabs.ai">aibalabs.ai</a></li>
+                </ul>
+            </div>
+
+            <p style="font-size: 14px; color: var(--text-light); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
+                Esta política se rige por la legislación de la República de Chile, en particular por la Ley N° 19.628 sobre Protección de la Vida Privada y, a partir del 1 de diciembre de 2026, por sus modificaciones introducidas por la Ley N° 21.719 sobre Protección de Datos Personales.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AIBA Labs · <a href="index.html">Volver al sitio</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
