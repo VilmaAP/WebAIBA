@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automatización con IA para clínicas y consultorios en Chile. Reduce los no-shows, automatiza el agendamiento y haz seguimiento post-consulta. Diagnóstico gratuito.">
+    <meta name="keywords" content="automatización IA clínicas Chile, agendamiento automático consultorios, reducir no-shows clínica, recordatorios citas médicas, chatbot clínica WhatsApp">
+    <meta name="author" content="AIBA Labs">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aibalabs.ai/clinicas">
+    <meta property="og:title" content="AIBA para Clínicas | Reduce no-shows y automatiza el agendamiento con IA">
+    <meta property="og:description" content="Cada paciente recibe agendamiento inmediato, recordatorios previos y seguimiento posterior. Menos ausencias, más tiempo para lo que importa.">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="AIBA Labs">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aibalabs.ai/clinicas">
+    <meta property="twitter:title" content="AIBA para Clínicas | Reduce no-shows y automatiza el agendamiento con IA">
+    <meta property="twitter:description" content="Cada paciente recibe agendamiento inmediato, recordatorios previos y seguimiento posterior. Menos ausencias, más tiempo para lo que importa.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aibalabs.ai/clinicas">
+
+    <title>Automatización con IA para Clínicas y Consultorios en Chile | AIBA</title>
+
+    <link rel="icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/7v6ooKX.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Automatización comercial con IA para clínicas y consultorios",
+      "provider": { "@type": "Organization", "name": "AIBA Labs", "url": "https://aibalabs.ai" },
+      "areaServed": "Chile",
+      "description": "Agendamiento automático, recordatorios de citas y seguimiento de pacientes con IA para clínicas y consultorios."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Funciona para múltiples especialidades y profesionales?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. AIBA gestiona la agenda de cada profesional por separado, con disponibilidades distintas por especialidad. El paciente puede agendar con el profesional correcto de forma autónoma, sin necesidad de llamar a recepción." } },
+        { "@type": "Question", "name": "¿Cómo maneja la confirmación y cancelación de citas?", "acceptedAnswer": { "@type": "Answer", "text": "AIBA envía recordatorios automáticos antes de cada cita pidiendo confirmación. Si el paciente cancela, el sistema libera el slot y puede ofrecerlo a pacientes en lista de espera. Todo sin intervención del equipo de recepción." } },
+        { "@type": "Question", "name": "¿Qué datos del paciente recopila antes de la consulta?", "acceptedAnswer": { "@type": "Answer", "text": "Puedes configurar AIBA para recopilar información clínica relevante antes de la cita: motivo de consulta, síntomas principales, medicamentos actuales y antecedentes relevantes. Esto permite al profesional llegar preparado a cada consulta." } },
+        { "@type": "Question", "name": "¿Es seguro para datos médicos de los pacientes?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las conversaciones y datos de tus pacientes se transmiten por canales cifrados (TLS/SSL) y se almacenan en infraestructura segura. Trabajamos bajo los principios de la Ley 19.628 sobre Protección de la Vida Privada. Los datos siguen siendo de tu clínica y no se usan con fines comerciales propios." } }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/"><img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA automatización comercial inteligente con IA" class="logo-image"></a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Inicio</a></li>
+                    <li><a href="#problemas" class="nav-link">Qué resolvemos</a></li>
+                    <li><a href="#como-funciona" class="nav-link">Cómo Funciona</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Activar modo oscuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-nav">Agendar Reunión</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="gradient-bg"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <span class="section-badge" style="margin-bottom: 1.5rem; display: inline-block;">Clínicas y Consultorios</span>
+                <h1 class="hero-title">
+                    Reduce los no-shows y libera tu agenda <span class="gradient-text">sin contratar más personal.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Cada paciente que consulta recibe agendamiento inmediato, recordatorios previos a su cita y seguimiento posterior. Menos ausencias, menos llamadas, más tiempo para lo que importa.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">+50%</div>
+                        <div class="stat-label">Eficiencia de agenda</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">-70%</div>
+                        <div class="stat-label">Ausencias</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Agendamiento disponible</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Agendar Reunión
+                    </a>
+                    <a href="https://wa.me/56957620945?text=¡Hola! Vi la página de clínicas y me gustaría saber cómo automatizar el agendamiento de mi clínica con AIBA."
+                       target="_blank" class="hero-cta-secondary">
+                        <i class="fab fa-whatsapp"></i>
+                        o escríbenos por WhatsApp · respondemos en menos de 1 h hábil
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-badges">
+                        <span><i class="fas fa-check-circle"></i> Diagnóstico personalizado</span>
+                        <span><i class="fas fa-check-circle"></i> Resultados medibles</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="hero-visual">
+                    <div class="chat-bubble chat-1">
+                        <div class="chat-avatar">🏥</div>
+                        <div class="chat-content">
+                            <p>Hola, quiero agendar con el Dr. Méndez para la próxima semana</p>
+                            <span class="chat-time">09:15</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-2">
+                        <div class="chat-avatar bot">🤖</div>
+                        <div class="chat-content">
+                            <p>¡Hola! El Dr. Méndez tiene disponibilidad el martes a las 10:30 o el jueves a las 16:00. ¿Cuál te viene mejor?</p>
+                            <span class="chat-time">09:15</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-3">
+                        <div class="chat-avatar">🏥</div>
+                        <div class="chat-content">
+                            <p>El martes a las 10:30 perfecto</p>
+                            <span class="chat-time">09:16</span>
+                        </div>
+                    </div>
+                    <div class="notification-badge">
+                        <i class="fas fa-check-double"></i>
+                        <span>Cita agendada automáticamente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="problems" id="problemas">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Los problemas que resolvemos</span>
+                <h2 class="section-title">¿Te suena familiar?</h2>
+                <p class="section-subtitle">Si respondiste sí a alguno, estamos para resolverlo.</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon"><i class="fas fa-user-times"></i></div>
+                    <h3>No-shows que vacían la agenda</h3>
+                    <p>Pacientes que no llegan sin avisar. Horas de agenda perdidas que no se pueden recuperar y profesionales esperando sin actividad.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">25% ausencias promedio</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Agendamiento por teléfono: lento y manual</h3>
+                    <p>Recepción saturada con llamadas para agendar, confirmar o cancelar citas. Tiempo valioso que podría enfocarse en la atención presencial.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-60% tiempo de recepción</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon"><i class="fas fa-bell-slash"></i></div>
+                    <h3>Sin recordatorios automáticos</h3>
+                    <p>Los pacientes olvidan sus citas o las confunden de horario. Sin recordatorios proactivos, los no-shows son inevitables.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-40% asistencia</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon"><i class="fas fa-comment-slash"></i></div>
+                    <h3>Sin seguimiento post-consulta</h3>
+                    <p>El paciente sale de la consulta y no hay contacto posterior. Seguimientos, controles y tratamientos continuos quedan al azar del paciente.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">0% adherencia al tratamiento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Qué hace AIBA por tu clínica</span>
+                <h2 class="section-title">Un sistema que gestiona la agenda y cuida a tus pacientes.</h2>
+                <p class="section-subtitle">Mientras tu equipo atiende consultas, AIBA gestiona el agendamiento, los recordatorios y el seguimiento.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-calendar-plus"></i></div>
+                    <h3>Agendamiento por especialidad</h3>
+                    <p>El paciente agenda directamente por WhatsApp o web con el profesional correcto, según especialidad y disponibilidad real. Sin llamadas, sin esperas.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Agendamiento por especialidad y disponibilidad</li>
+                        <li><i class="fas fa-check"></i> Gestión de múltiples profesionales</li>
+                        <li><i class="fas fa-check"></i> Confirmación inmediata al paciente</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Recordatorios automáticos pre-cita</h3>
+                    <p>La IA envía recordatorios con anticipación y pide confirmación. Si el paciente no confirma, le hace seguimiento. Los no-shows se reducen drásticamente.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Recordatorio automático pre-cita</li>
+                        <li><i class="fas fa-check"></i> Confirmación o reagendamiento en un mensaje</li>
+                        <li><i class="fas fa-check"></i> Lista de espera activada ante cancelaciones</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>Recopilación de síntomas pre-consulta</h3>
+                    <p>Antes de la cita, la IA recopila motivo de consulta, síntomas y antecedentes relevantes. El profesional llega a la consulta con el contexto necesario.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Formulario clínico conversacional por WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Información organizada antes de la consulta</li>
+                        <li><i class="fas fa-check"></i> Adaptable a cada especialidad</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-notes-medical"></i></div>
+                    <h3>Seguimiento post-consulta</h3>
+                    <p>Después de la cita, AIBA hace seguimiento al paciente: recordatorios de medicación, controles pendientes y re-agendamiento automático.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Seguimiento post-consulta personalizado</li>
+                        <li><i class="fas fa-check"></i> Recordatorio de controles y tratamientos</li>
+                        <li><i class="fas fa-check"></i> Re-agendamiento automático cuando corresponde</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Caso de éxito real</span>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-slider" data-aos="fade-up">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Los no-shows eran nuestro mayor problema: perdíamos horas de agenda todas las semanas. AIBA no solo agenda y confirma automáticamente, sino que hace seguimiento a pacientes que no volvieron. Nuestras ausencias bajaron de 25% a 5% y la inversión se pagó en dos meses."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Dr. Carlos Méndez</h4>
+                                    <p>Director Clínica DentPro</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">-80%</span>
+                                    <span class="stat-label">No-shows</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">+40%</span>
+                                    <span class="stat-label">Capacidad usada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Preguntas frecuentes</span>
+                <h2 class="section-title">Todo lo que necesitas saber</h2>
+                <p class="section-subtitle">¿Tienes más preguntas? <a href="/#contacto">Contáctanos</a></p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>¿Funciona para múltiples especialidades y profesionales?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. AIBA gestiona la agenda de cada profesional por separado, con disponibilidades distintas por especialidad. El paciente puede agendar con el profesional correcto de forma autónoma, sin necesidad de llamar a recepción.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question">
+                        <span>¿Cómo maneja la confirmación y cancelación de citas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA envía recordatorios automáticos antes de cada cita pidiendo confirmación. Si el paciente cancela, el sistema libera el slot y puede ofrecerlo a pacientes en lista de espera. Todo sin intervención del equipo de recepción.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>¿Qué datos del paciente recopila antes de la consulta?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puedes configurar AIBA para recopilar información clínica relevante antes de la cita: motivo de consulta, síntomas principales, medicamentos actuales y antecedentes relevantes. Esto permite al profesional llegar preparado a cada consulta.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question">
+                        <span>¿Es seguro para datos médicos de los pacientes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Las conversaciones y datos de tus pacientes se transmiten por canales cifrados (TLS/SSL) y se almacenan en infraestructura segura. Trabajamos bajo los principios de la Ley 19.628 sobre Protección de la Vida Privada. Los datos siguen siendo de tu clínica y no se usan con fines comerciales propios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contacto">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">¿Cuántas horas de agenda recuperarías si <span class="gradient-text">los no-shows bajaran al 5%</span>?</h2>
+                <p class="cta-subtitle">Agenda un diagnóstico gratuito de 45 minutos. Te mostramos exactamente cómo funcionaría AIBA en tu clínica.</p>
+                <div class="cta-content-wrapper" style="background-color: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 20px 0;">
+                    <div class="cta-button-container">
+                        <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Agendar Reunión
+                        </a>
+                        <p class="cta-note" style="padding: 10px; border-radius: 8px; display: inline-block; margin-top: 15px;">
+                            <i class="fas fa-lock"></i> Agenda directamente en nuestro calendario. Sin formularios, sin esperas.
+                        </p>
+                    </div>
+                    <div class="cta-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diagnóstico personalizado de tu ciclo de atención</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Propuesta a medida para tu especialidad</span>
+                        </div>
+                        <p class="limited-spots">
+                            <i class="fas fa-clock"></i> Respondemos en menos de 24 h hábiles. Diagnóstico sin costo ni compromiso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="/"><img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA automatización comercial inteligente con IA" class="logo-image"></a>
+                    </div>
+                    <p class="footer-description">Automatización comercial inteligente para empresas. Cada lead atendido, cada oportunidad aprovechada.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/aibalabs/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="/#como-funciona">Cómo Funciona</a></li>
+                        <li><a href="/#industrias">Industrias</a></li>
+                        <li><a href="/#testimonios">Casos de Éxito</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industrias</h4>
+                    <ul>
+                        <li><a href="/hoteles.html">Hoteles y Hostales</a></li>
+                        <li><a href="/restaurantes.html">Restaurantes</a></li>
+                        <li><a href="/clinicas.html">Clínicas y Consultorios</a></li>
+                        <li><a href="/inmobiliarias.html">Inmobiliarias</a></li>
+                        <li><a href="/infoproductores.html">Infoproductores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="/#contacto">Contacto</a></li>
+                        <li><a href="mailto:contacto@aibalabs.ai">contacto@aibalabs.ai</a></li>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIBA (AI Business Automation). Todos los derechos reservados.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-shield-alt"></i> SSL · Conexión cifrada</span>
+                    <span><i class="fas fa-user-shield"></i> Tratamiento conforme Ley 19.628 y 21.719</span>
+                    <span><i class="fas fa-lock"></i> Infraestructura segura en la nube</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-widget" id="whatsappWidget">
+        <div class="whatsapp-bubble" id="whatsappBubble">
+            <div class="whatsapp-header">
+                <div class="whatsapp-logo">
+                    <img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA Logo"><span>AIBA</span>
+                </div>
+                <button class="whatsapp-close" id="whatsappClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="whatsapp-message"><p>Hola, ¿tienes alguna pregunta? ¡Conversemos!</p></div>
+            <a href="https://wa.me/56957620945?text=¡Hola! Vi la página de clínicas y quiero saber cómo automatizar el agendamiento de mi clínica con AIBA." target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+            </a>
+        </div>
+        <div class="whatsapp-trigger" id="whatsappTrigger">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('aos-animate'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

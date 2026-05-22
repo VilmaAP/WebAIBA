@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automatización con IA para restaurantes en Chile. Elimina los no-shows, llena tus mesas y fideliza clientes con seguimiento automático. Diagnóstico gratuito.">
+    <meta name="keywords" content="automatización IA restaurantes Chile, sistema reservas restaurante WhatsApp, reducir no-shows restaurante, gestión mesas automática, chatbot restaurante">
+    <meta name="author" content="AIBA Labs">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aibalabs.ai/restaurantes">
+    <meta property="og:title" content="AIBA para Restaurantes | Llena tus mesas y elimina los no-shows con IA">
+    <meta property="og:description" content="Reservas confirmadas, recordatorios automáticos y clientes que vuelven porque nunca los olvidaste.">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="AIBA Labs">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aibalabs.ai/restaurantes">
+    <meta property="twitter:title" content="AIBA para Restaurantes | Llena tus mesas y elimina los no-shows con IA">
+    <meta property="twitter:description" content="Reservas confirmadas, recordatorios automáticos y clientes que vuelven porque nunca los olvidaste.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aibalabs.ai/restaurantes">
+
+    <title>Automatización con IA para Restaurantes en Chile | AIBA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7v6ooKX.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/7v6ooKX.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Automatización comercial con IA para restaurantes",
+      "provider": { "@type": "Organization", "name": "AIBA Labs", "url": "https://aibalabs.ai" },
+      "areaServed": "Chile",
+      "description": "Sistema de reservas, recordatorios, seguimiento y fidelización automatizado con IA para restaurantes."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Puede AIBA gestionar turnos y capacidad por horario?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. AIBA conoce la capacidad de tu restaurante por turno y horario. Cuando alguien reserva, verifica disponibilidad en tiempo real y distribuye las mesas de forma equilibrada. Evita el exceso de reservas y las horas muertas." } },
+        { "@type": "Question", "name": "¿Cómo funciona el recordatorio anti no-show?", "acceptedAnswer": { "@type": "Answer", "text": "AIBA envía un recordatorio automático horas antes de la reserva pidiendo confirmación. Si el cliente no confirma, el sistema le hace un seguimiento adicional. Esto reduce los no-shows hasta un 80% sin que tu equipo intervenga." } },
+        { "@type": "Question", "name": "¿Se integra con nuestro sistema de reservas actual?", "acceptedAnswer": { "@type": "Answer", "text": "AIBA se integra con los principales sistemas de gestión de restaurantes vía API. Si tienes un sistema propietario, evaluamos la integración en el diagnóstico inicial. En muchos casos la implementación no requiere cambiar tus herramientas actuales." } },
+        { "@type": "Question", "name": "¿Puede AIBA hacer re-contacto a clientes frecuentes?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. AIBA identifica clientes que no han vuelto en un periodo determinado y les envía un mensaje personalizado con una oferta o recordatorio. Esto genera reservas recurrentes sin que tengas que pensar en ello." } }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/"><img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA automatización comercial inteligente con IA" class="logo-image"></a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Inicio</a></li>
+                    <li><a href="#problemas" class="nav-link">Qué resolvemos</a></li>
+                    <li><a href="#como-funciona" class="nav-link">Cómo Funciona</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Activar modo oscuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-nav">Agendar Reunión</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="gradient-bg"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <span class="section-badge" style="margin-bottom: 1.5rem; display: inline-block;">Restaurantes</span>
+                <h1 class="hero-title">
+                    Llena tus mesas todos los días. <span class="gradient-text">Sin no-shows, sin llamadas manuales.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Cada persona que pregunta por disponibilidad termina sentada en tu mesa. Reservas confirmadas, recordatorios automáticos, y clientes que vuelven porque nunca los olvidaste.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">+35%</div>
+                        <div class="stat-label">Ocupación de mesas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">-80%</div>
+                        <div class="stat-label">No-shows</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Recepción de reservas</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Agendar Reunión
+                    </a>
+                    <a href="https://wa.me/56957620945?text=¡Hola! Vi la página de restaurantes y me gustaría saber cómo automatizar las reservas de mi restaurante con AIBA."
+                       target="_blank" class="hero-cta-secondary">
+                        <i class="fab fa-whatsapp"></i>
+                        o escríbenos por WhatsApp · respondemos en menos de 1 h hábil
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-badges">
+                        <span><i class="fas fa-check-circle"></i> Diagnóstico personalizado</span>
+                        <span><i class="fas fa-check-circle"></i> Resultados medibles</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="hero-visual">
+                    <div class="chat-bubble chat-1">
+                        <div class="chat-avatar">🍽️</div>
+                        <div class="chat-content">
+                            <p>Hola, ¿tienen mesa para 3 el sábado a las 9pm?</p>
+                            <span class="chat-time">14:23</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-2">
+                        <div class="chat-avatar bot">🤖</div>
+                        <div class="chat-content">
+                            <p>¡Claro! Tenemos disponibilidad a las 21:00 del sábado para 3 personas. Te confirmo la mesa y te envío un recordatorio el viernes. ¿Reservo?</p>
+                            <span class="chat-time">14:23</span>
+                        </div>
+                    </div>
+                    <div class="chat-bubble chat-3">
+                        <div class="chat-avatar">🍽️</div>
+                        <div class="chat-content">
+                            <p>Perfecto, reserva por favor ✓</p>
+                            <span class="chat-time">14:24</span>
+                        </div>
+                    </div>
+                    <div class="notification-badge">
+                        <i class="fas fa-check-double"></i>
+                        <span>Mesa reservada automáticamente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="problems" id="problemas">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Los problemas que resolvemos</span>
+                <h2 class="section-title">¿Te suena familiar?</h2>
+                <p class="section-subtitle">Si respondiste sí a alguno, estamos para resolverlo.</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon"><i class="fas fa-phone-slash"></i></div>
+                    <h3>Consultas perdidas en horas pico</h3>
+                    <p>Cuando el servicio está en marcha, nadie puede atender el teléfono ni los mensajes. Esas consultas que no responden son reservas que se van a la competencia.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-35% reservas potenciales</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon"><i class="fas fa-chair"></i></div>
+                    <h3>Mesas vacías por no-shows</h3>
+                    <p>Reservas que no llegan sin previo aviso. Sin recordatorios automáticos, los no-shows son inevitables y tu capacidad se desperdicia.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">-80% ocupación real</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon"><i class="fas fa-user-slash"></i></div>
+                    <h3>Clientes que no vuelven</h3>
+                    <p>El cliente tuvo una buena experiencia, pero nunca más supiste de él. Sin un sistema de re-contacto, los clientes frecuentes se convierten en clientes de una sola vez.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">0% fidelización</span>
+                    </div>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Gestión de turnos sin visibilidad</h3>
+                    <p>Sin un control claro de la capacidad por horario, es fácil aceptar más reservas de las que puedes atender o dejar mesas vacías sin saberlo.</p>
+                    <div class="problem-impact">
+                        <span class="impact-badge negative">15% dobles reservas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="how-it-works" id="como-funciona">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Qué hace AIBA por tu restaurante</span>
+                <h2 class="section-title">Un sistema que llena tus mesas y fideliza a tus clientes.</h2>
+                <p class="section-subtitle">Mientras tu equipo atiende el servicio, AIBA gestiona las reservas, los recordatorios y el re-contacto.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Reservas con gestión de turnos</h3>
+                    <p>AIBA conoce tu capacidad por turno y horario. Confirma reservas en tiempo real distribuyendo las mesas de forma equilibrada, sin errores ni dobles agendamientos.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Reservas con gestión de turnos y capacidad</li>
+                        <li><i class="fas fa-check"></i> Verificación de disponibilidad en tiempo real</li>
+                        <li><i class="fas fa-check"></i> Confirmación inmediata al cliente</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Recordatorios y confirmación automática</h3>
+                    <p>Horas antes de la reserva, la IA envía un recordatorio y pide confirmación. Quien no confirma recibe un seguimiento adicional. Los no-shows se reducen drásticamente.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Recordatorio automático pre-reserva</li>
+                        <li><i class="fas fa-check"></i> Confirmación o cancelación en un clic</li>
+                        <li><i class="fas fa-check"></i> Lista de espera activada ante cancelaciones</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Menú digital interactivo</h3>
+                    <p>La IA responde preguntas sobre el menú, informa sobre platos del día, precios y opciones especiales. El cliente llega informado y el servicio fluye mejor.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Respuestas sobre carta y disponibilidad</li>
+                        <li><i class="fas fa-check"></i> Información de alérgenos y opciones especiales</li>
+                        <li><i class="fas fa-check"></i> Sugerencias de maridaje y recomendaciones</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Re-contacto para clientes frecuentes</h3>
+                    <p>AIBA identifica clientes que no han vuelto y les envía un mensaje personalizado. Cumpleaños, fechas especiales, ofertas: tu restaurante siempre presente en su mente.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Re-contacto automático a clientes inactivos</li>
+                        <li><i class="fas fa-check"></i> Mensajes personalizados por ocasión</li>
+                        <li><i class="fas fa-check"></i> Historial de visitas y preferencias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Caso de éxito real</span>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-slider" data-aos="fade-up">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Estábamos ocupados atendiendo mesas y las consultas se perdían. Ahora cada persona que escribe termina con reserva confirmada, recibe recordatorio antes de llegar y la IA hasta sugiere maridaje de vinos. Lo que más nos sorprendió fue ver el impacto en ticket promedio."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>María Rodríguez</h4>
+                                    <p>Propietaria de <a href="#" target="_blank" rel="noopener noreferrer" class="testimonial-business-link">La Trattoría <i class="fas fa-external-link-alt"></i></a></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">+85%</span>
+                                    <span class="stat-label">Conversión</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">+32%</span>
+                                    <span class="stat-label">Ticket promedio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Preguntas frecuentes</span>
+                <h2 class="section-title">Todo lo que necesitas saber</h2>
+                <p class="section-subtitle">¿Tienes más preguntas? <a href="/#contacto">Contáctanos</a></p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>¿Puede AIBA gestionar turnos y capacidad por horario?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. AIBA conoce la capacidad de tu restaurante por turno y horario. Cuando alguien reserva, verifica disponibilidad en tiempo real y distribuye las mesas de forma equilibrada. Evita el exceso de reservas y las horas muertas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question">
+                        <span>¿Cómo funciona el recordatorio anti no-show?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA envía un recordatorio automático horas antes de la reserva pidiendo confirmación. Si el cliente no confirma, el sistema le hace un seguimiento adicional. Esto reduce los no-shows hasta un 80% sin que tu equipo intervenga.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>¿Se integra con nuestro sistema de reservas actual?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AIBA se integra con los principales sistemas de gestión de restaurantes vía API. Si tienes un sistema propietario, evaluamos la integración en el diagnóstico inicial. En muchos casos la implementación no requiere cambiar tus herramientas actuales.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question">
+                        <span>¿Puede AIBA hacer re-contacto a clientes frecuentes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. AIBA identifica clientes que no han vuelto en un periodo determinado y les envía un mensaje personalizado con una oferta o recordatorio. Esto genera reservas recurrentes sin que tengas que pensar en ello.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contacto">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">¿Cuántas mesas más llenarías si <span class="gradient-text">nadie esperara tu respuesta</span>?</h2>
+                <p class="cta-subtitle">Agenda un diagnóstico gratuito de 45 minutos. Te mostramos exactamente cómo funcionaría AIBA en tu restaurante.</p>
+                <div class="cta-content-wrapper" style="background-color: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 20px 0;">
+                    <div class="cta-button-container">
+                        <a href="https://calendar.app.google/6ar5yTj3trL4Jx3W8" target="_blank" class="btn btn-primary btn-lg btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Agendar Reunión
+                        </a>
+                        <p class="cta-note" style="padding: 10px; border-radius: 8px; display: inline-block; margin-top: 15px;">
+                            <i class="fas fa-lock"></i> Agenda directamente en nuestro calendario. Sin formularios, sin esperas.
+                        </p>
+                    </div>
+                    <div class="cta-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diagnóstico personalizado de tu ciclo de reservas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Propuesta a medida para tu restaurante</span>
+                        </div>
+                        <p class="limited-spots">
+                            <i class="fas fa-clock"></i> Respondemos en menos de 24 h hábiles. Diagnóstico sin costo ni compromiso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="/"><img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA automatización comercial inteligente con IA" class="logo-image"></a>
+                    </div>
+                    <p class="footer-description">Automatización comercial inteligente para empresas. Cada lead atendido, cada oportunidad aprovechada.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/aibalabs/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="/#como-funciona">Cómo Funciona</a></li>
+                        <li><a href="/#industrias">Industrias</a></li>
+                        <li><a href="/#testimonios">Casos de Éxito</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industrias</h4>
+                    <ul>
+                        <li><a href="/hoteles.html">Hoteles y Hostales</a></li>
+                        <li><a href="/restaurantes.html">Restaurantes</a></li>
+                        <li><a href="/clinicas.html">Clínicas y Consultorios</a></li>
+                        <li><a href="/inmobiliarias.html">Inmobiliarias</a></li>
+                        <li><a href="/infoproductores.html">Infoproductores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="/#contacto">Contacto</a></li>
+                        <li><a href="mailto:contacto@aibalabs.ai">contacto@aibalabs.ai</a></li>
+                        <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIBA (AI Business Automation). Todos los derechos reservados.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-shield-alt"></i> SSL · Conexión cifrada</span>
+                    <span><i class="fas fa-user-shield"></i> Tratamiento conforme Ley 19.628 y 21.719</span>
+                    <span><i class="fas fa-lock"></i> Infraestructura segura en la nube</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-widget" id="whatsappWidget">
+        <div class="whatsapp-bubble" id="whatsappBubble">
+            <div class="whatsapp-header">
+                <div class="whatsapp-logo">
+                    <img src="https://i.imgur.com/DC3cwTB.png" alt="AIBA Logo"><span>AIBA</span>
+                </div>
+                <button class="whatsapp-close" id="whatsappClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="whatsapp-message"><p>Hola, ¿tienes alguna pregunta? ¡Conversemos!</p></div>
+            <a href="https://wa.me/56957620945?text=¡Hola! Vi la página de restaurantes y quiero saber cómo automatizar las reservas de mi restaurante con AIBA." target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+            </a>
+        </div>
+        <div class="whatsapp-trigger" id="whatsappTrigger">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('aos-animate'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

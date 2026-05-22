@@ -1185,6 +1185,22 @@ body.dark-mode .theme-toggle-btn:hover {
     color: var(--success-color);
 }
 
+.industry-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.industry-card-link:hover {
+    gap: 0.65rem;
+}
+
 /* ===========================
    Pricing Section
    =========================== */
