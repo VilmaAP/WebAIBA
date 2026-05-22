@@ -1334,6 +1334,32 @@ body.dark-mode .theme-toggle-btn:hover {
 }
 
 /* ===========================
+   Custom Projects Closing Line
+   =========================== */
+
+.custom-projects-line {
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(127, 191, 157, 0.15);
+    margin-top: 1rem;
+}
+
+.custom-projects-inner {
+    text-align: center;
+}
+
+.custom-projects-inner p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.custom-projects-inner a {
+    color: var(--primary);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* ===========================
    Testimonials Section
    =========================== */
 
