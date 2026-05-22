@@ -1,12 +1,13 @@
-# robots.txt for AIBA
-# https://aibalabs.ai/robots.txt
-
 User-agent: *
 Allow: /
-
-# Sitemap location
 Sitemap: https://aibalabs.ai/sitemap.xml
 
-# Block specific bots if needed
-# User-agent: BadBot
-# Disallow: /
+# Permitir crawlers de IA (importante para AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
