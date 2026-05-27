@@ -147,30 +147,53 @@
             </div>
             <div class="hero-image" data-aos="fade-left">
                 <div class="hero-visual">
-                    <div class="chat-bubble chat-1">
-                        <div class="chat-avatar">🍽️</div>
-                        <div class="chat-content">
-                            <p>Hola, ¿tienen mesa para 3 el sábado a las 9pm?</p>
-                            <span class="chat-time">14:23</span>
+                    <div class="wa-phone">
+                        <div class="wa-header">
+                            <div class="wa-avatar-wrap">
+                                <div class="wa-icon-avatar"><i class="fas fa-utensils"></i></div>
+                                <span class="wa-online-dot"></span>
+                            </div>
+                            <div class="wa-header-info">
+                                <span class="wa-name">Tu restaurante</span>
+                                <span class="wa-status">en línea</span>
+                            </div>
+                            <div class="wa-header-icons">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-phone"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chat-bubble chat-2">
-                        <div class="chat-avatar bot">🤖</div>
-                        <div class="chat-content">
-                            <p>¡Claro! Tenemos disponibilidad a las 21:00 del sábado para 3 personas. Te confirmo la mesa y te envío un recordatorio el viernes. ¿Reservo?</p>
-                            <span class="chat-time">14:23</span>
+                        <div class="wa-body">
+                            <div class="wa-msg wa-sent wa-m1">
+                                <div class="wa-bubble">
+                                    <p>Hola, ¿tienen mesa para 3 el sábado a las 9pm?</p>
+                                    <span class="wa-time">14:23 <i class="fas fa-check-double"></i></span>
+                                </div>
+                            </div>
+                            <div class="wa-msg wa-received wa-m2">
+                                <div class="wa-bubble wa-bubble-typing">
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                </div>
+                            </div>
+                            <div class="wa-msg wa-received wa-m3">
+                                <div class="wa-bubble">
+                                    <p>¡Claro! Tenemos disponibilidad a las 21:00 del sábado para 3 personas. Te confirmo la mesa y te envío un recordatorio el viernes. ¿Reservo?</p>
+                                    <span class="wa-time">14:23</span>
+                                </div>
+                            </div>
+                            <div class="wa-msg wa-sent wa-m4">
+                                <div class="wa-bubble">
+                                    <p>Perfecto, reserva por favor ✓</p>
+                                    <span class="wa-time">14:24 <i class="fas fa-check-double"></i></span>
+                                </div>
+                            </div>
+                            <div class="wa-confirmed wa-m5">
+                                <i class="fas fa-check-double"></i>
+                                <span>Mesa reservada automáticamente</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chat-bubble chat-3">
-                        <div class="chat-avatar">🍽️</div>
-                        <div class="chat-content">
-                            <p>Perfecto, reserva por favor ✓</p>
-                            <span class="chat-time">14:24</span>
-                        </div>
-                    </div>
-                    <div class="notification-badge">
-                        <i class="fas fa-check-double"></i>
-                        <span>Mesa reservada automáticamente</span>
                     </div>
                 </div>
             </div>
@@ -476,6 +499,31 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
         });
+    </script>
+
+    <script>
+    (function () {
+        function startChatLoop() {
+            var m1 = document.querySelector('.wa-m1');
+            var m2 = document.querySelector('.wa-m2');
+            var m3 = document.querySelector('.wa-m3');
+            var m4 = document.querySelector('.wa-m4');
+            var m5 = document.querySelector('.wa-m5');
+            if (!m1) return;
+            function show(el, delay) {
+                setTimeout(function () { el.style.transition = 'opacity 0.38s ease, transform 0.38s ease'; el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, delay);
+            }
+            function hide(el, delay) {
+                setTimeout(function () { el.style.transition = 'opacity 0.22s ease, transform 0.22s ease'; el.style.opacity = '0'; el.style.transform = 'translateY(-5px)'; }, delay);
+            }
+            function reset() {
+                [m1, m2, m3, m4, m5].forEach(function (el) { el.style.transition = 'none'; el.style.opacity = '0'; el.style.transform = 'translateY(8px)'; });
+            }
+            show(m1, 500); show(m2, 1300); hide(m2, 4000); show(m3, 4100); show(m4, 6000); show(m5, 7100);
+            setTimeout(function () { hide(m5, 0); setTimeout(function () { reset(); setTimeout(startChatLoop, 400); }, 600); }, 11500);
+        }
+        document.addEventListener('DOMContentLoaded', startChatLoop);
+    })();
     </script>
 </body>
 </html>
