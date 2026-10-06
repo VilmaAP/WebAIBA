@@ -770,7 +770,7 @@ document.addEventListener('click', (e) => {
 
 // Auto-show bubble after 10 seconds on first visit
 let hasShownAutoBubble = localStorage.getItem('aiba_whatsapp_shown');
-if (!hasShownAutoBubble) {
+if (whatsappWidget && !hasShownAutoBubble) {
     setTimeout(() => {
         if (!isBubbleOpen) {
             toggleBubble();
